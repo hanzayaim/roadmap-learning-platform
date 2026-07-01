@@ -1,0 +1,28 @@
+{
+  "layout": {
+    "brandName": "Roadmap Learning",
+    "nav": {
+      "home": "Home",
+      "explore": "Explore",
+      "leaderboard": "Leaderboard"
+    },
+    "footer": {
+      "copyright": "© {year} Roadmap Learning Platform",
+      "tagline": "Learn with structured roadmaps"
+    }
+  },
+  "homePage": {
+    "heroTitle": "Master skills with guided roadmaps",
+    "heroSubtitle": "Explore learning paths, track progress, and climb the leaderboard — all in one place.",
+    "ctaExplore": "Start exploring"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "id": "Indonesia",
+    "en": "English"
+  },
+  "leaderboardPage": {
+    "title": "Leaderboard",
+    "comingSoon": "Leaderboard is coming in Phase 4."
+  }
+}

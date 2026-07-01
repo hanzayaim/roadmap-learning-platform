@@ -1,0 +1,28 @@
+{
+  "layout": {
+    "brandName": "Roadmap Learning",
+    "nav": {
+      "home": "Beranda",
+      "explore": "Jelajahi",
+      "leaderboard": "Peringkat"
+    },
+    "footer": {
+      "copyright": "© {year} Roadmap Learning Platform",
+      "tagline": "Belajar dengan roadmap terstruktur"
+    }
+  },
+  "homePage": {
+    "heroTitle": "Kuasai skill dengan roadmap terpandu",
+    "heroSubtitle": "Jelajahi jalur belajar, lacak progres, dan naik peringkat — semua dalam satu tempat.",
+    "ctaExplore": "Mulai menjelajah"
+  },
+  "languageSwitcher": {
+    "label": "Bahasa",
+    "id": "Indonesia",
+    "en": "English"
+  },
+  "leaderboardPage": {
+    "title": "Peringkat",
+    "comingSoon": "Halaman peringkat akan hadir di Fase 4."
+  }
+}
