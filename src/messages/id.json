@@ -4,7 +4,10 @@
     "nav": {
       "home": "Beranda",
       "explore": "Jelajahi",
-      "leaderboard": "Peringkat"
+      "leaderboard": "Peringkat",
+      "login": "Masuk",
+      "register": "Daftar",
+      "logout": "Keluar"
     },
     "footer": {
       "copyright": "© {year} Roadmap Learning Platform",
@@ -24,5 +27,54 @@
   "leaderboardPage": {
     "title": "Peringkat",
     "comingSoon": "Halaman peringkat akan hadir di Fase 4."
+  },
+  "authPage": {
+    "login": {
+      "title": "Selamat datang kembali",
+      "subtitle": "Masuk untuk melanjutkan perjalanan belajarmu.",
+      "email": "Email",
+      "password": "Kata sandi",
+      "submit": "Masuk",
+      "noAccount": "Belum punya akun?",
+      "registerLink": "Buat akun"
+    },
+    "register": {
+      "title": "Buat akun baru",
+      "subtitle": "Bergabung dan mulai jelajahi roadmap.",
+      "name": "Nama lengkap",
+      "email": "Email",
+      "password": "Kata sandi",
+      "confirmPassword": "Konfirmasi kata sandi",
+      "submit": "Buat akun",
+      "hasAccount": "Sudah punya akun?",
+      "loginLink": "Masuk"
+    },
+    "validation": {
+      "emailRequired": "Email wajib diisi",
+      "emailInvalid": "Masukkan alamat email yang valid",
+      "passwordRequired": "Kata sandi wajib diisi",
+      "passwordMin": "Kata sandi minimal 6 karakter",
+      "nameRequired": "Nama wajib diisi",
+      "passwordMismatch": "Kata sandi tidak cocok"
+    }
+  },
+  "profilePage": {
+    "title": "Profil kamu",
+    "subtitle": "Kelola akun dan lihat riwayat koin.",
+    "accountSection": "Detail akun",
+    "accountDescription": "Data preview untuk sesi login statis.",
+    "nameLabel": "Nama",
+    "emailLabel": "Email",
+    "coinsLabel": "Saldo koin",
+    "coinsValue": "{count} koin",
+    "historySection": "Riwayat koin",
+    "historyDescription": "Top-up dan pengeluaran terbaru dari mock data.",
+    "amountPositive": "+{count}",
+    "amountNegative": "-{count}",
+    "transactions": {
+      "welcomeBonus": "Bonus selamat datang",
+      "roadmapUnlock": "Buka roadmap",
+      "coinPackage": "Pembelian paket koin"
+    }
   }
 }

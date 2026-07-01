@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
+import { NavbarAuth } from "@/components/layout/NavbarAuth";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 
@@ -27,6 +28,7 @@ export async function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <NavbarAuth />
           <LanguageSwitcher />
         </div>
       </div>
