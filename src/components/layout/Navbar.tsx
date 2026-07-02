@@ -19,7 +19,7 @@ export async function Navbar() {
           <Button variant="ghost" size="sm" render={<Link href="/" />}>
             {t("nav.home")}
           </Button>
-          <Button variant="ghost" size="sm" render={<Link href="/" />}>
+          <Button variant="ghost" size="sm" render={<Link href="/#explore" />}>
             {t("nav.explore")}
           </Button>
           <Button variant="ghost" size="sm" render={<Link href="/leaderboard" />}>

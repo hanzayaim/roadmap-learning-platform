@@ -1,24 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 
 import { Footer } from "@/components/layout/Footer";
+import { HtmlLang } from "@/components/layout/HtmlLang";
 import { Navbar } from "@/components/layout/Navbar";
 import { AuthProvider } from "@/hooks/useAuth";
 import { routing } from "@/i18n/routing";
-
-import "../globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -41,19 +29,13 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col font-sans">
-        <NextIntlClientProvider messages={messages}>
-          <AuthProvider>
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </AuthProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <AuthProvider>
+        <HtmlLang />
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </AuthProvider>
+    </NextIntlClientProvider>
   );
 }

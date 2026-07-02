@@ -28,6 +28,133 @@
     "title": "Leaderboard",
     "comingSoon": "Leaderboard is coming in Phase 4."
   },
+  "explorePage": {
+    "searchPlaceholder": "Search categories or roadmaps...",
+    "categoriesTitle": "Browse categories",
+    "categoriesDescription": "Pick a field and dive into structured learning paths.",
+    "trendingTitle": "Trending roadmaps",
+    "trendingDescription": "Popular paths learners are exploring right now.",
+    "roadmapCount": "{count} roadmaps",
+    "nodeCount": "{count} nodes",
+    "viewRoadmap": "View roadmap",
+    "noResults": "No results found for \"{query}\".",
+    "subcategoriesDescription": "Choose a topic to see available roadmaps.",
+    "roadmapsDescription": "Select a roadmap to start learning.",
+    "backToHome": "Back to home",
+    "backToSubcategories": "Back to sub-categories"
+  },
+  "vote": {
+    "upvote": "Upvote",
+    "downvote": "Downvote"
+  },
+  "categories": {
+    "programming": "Programming",
+    "design": "Design",
+    "dataScience": "Data Science",
+    "devops": "DevOps"
+  },
+  "subcategories": {
+    "webDevelopment": "Web Development",
+    "mobileDevelopment": "Mobile Development",
+    "backendDevelopment": "Backend Development",
+    "uiDesign": "UI Design",
+    "uxResearch": "UX Research",
+    "machineLearning": "Machine Learning",
+    "cloudInfrastructure": "Cloud Infrastructure"
+  },
+  "roadmaps": {
+    "frontendFundamentals": "Frontend Fundamentals",
+    "frontendFundamentalsDesc": "HTML, CSS, and JavaScript essentials for web development.",
+    "reactMastery": "React Mastery",
+    "reactMasteryDesc": "Component patterns, hooks, and state management with React.",
+    "nodejsBasics": "Node.js Basics",
+    "nodejsBasicsDesc": "Build APIs and server-side apps with Node.js.",
+    "flutterStarter": "Flutter Starter",
+    "flutterStarterDesc": "Cross-platform mobile apps with Flutter and Dart.",
+    "figmaWorkflow": "Figma Workflow",
+    "figmaWorkflowDesc": "Design systems and prototyping in Figma.",
+    "pythonMlIntro": "Python ML Intro",
+    "pythonMlIntroDesc": "Machine learning foundations with Python."
+  },
+  "roadmapPage": {
+    "learningPath": "Learning path",
+    "learningPathDescription": "Click a node to view study materials.",
+    "openMaterial": "View material",
+    "materialTitle": "Study material",
+    "coinPrice": "Price: {coin} coins"
+  },
+  "roadmapNodes": {
+    "htmlBasics": {
+      "title": "HTML Basics",
+      "description": "Learn semantic HTML tags and document structure.",
+      "material": "Study the core HTML elements: headings, paragraphs, lists, links, and forms. Practice building a simple landing page skeleton."
+    },
+    "cssLayout": {
+      "title": "CSS Layout",
+      "description": "Master flexbox, grid, and responsive design.",
+      "material": "Review modern CSS layout techniques and build responsive card layouts that adapt from mobile to desktop."
+    },
+    "javascriptIntro": {
+      "title": "JavaScript Intro",
+      "description": "Variables, functions, and DOM manipulation.",
+      "material": "Learn JS fundamentals and connect button interactions to update the DOM without a framework."
+    },
+    "componentsProps": {
+      "title": "Components & Props",
+      "description": "Compose reusable UI with props.",
+      "material": "Break UI into components and pass data through props with TypeScript interfaces."
+    },
+    "hooksState": {
+      "title": "Hooks & State",
+      "description": "Manage local state with useState and useEffect.",
+      "material": "Practice controlled inputs, derived state, and side effects in functional components."
+    },
+    "dataFetching": {
+      "title": "Data Fetching",
+      "description": "Load remote data in React apps.",
+      "material": "Fetch JSON from mock endpoints and render loading and empty states."
+    },
+    "nodeRuntime": {
+      "title": "Node Runtime",
+      "description": "Understand the event loop and modules.",
+      "material": "Explore CommonJS vs ESM modules and how Node handles async I/O."
+    },
+    "expressApi": {
+      "title": "Express API",
+      "description": "Create REST endpoints with Express.",
+      "material": "Build CRUD routes, middleware, and basic error handling for a mock API."
+    },
+    "dartBasics": {
+      "title": "Dart Basics",
+      "description": "Language syntax and null safety.",
+      "material": "Learn Dart types, collections, and null-safe patterns used in Flutter."
+    },
+    "widgetTree": {
+      "title": "Widget Tree",
+      "description": "Compose screens with Flutter widgets.",
+      "material": "Practice stateless vs stateful widgets and layout with Column, Row, and ListView."
+    },
+    "designTokens": {
+      "title": "Design Tokens",
+      "description": "Colors, spacing, and typography systems.",
+      "material": "Define token libraries in Figma and apply them across components."
+    },
+    "prototyping": {
+      "title": "Prototyping",
+      "description": "Interactive flows and handoff.",
+      "material": "Link screens with transitions and annotate specs for developers."
+    },
+    "numpyPandas": {
+      "title": "NumPy & Pandas",
+      "description": "Data preparation for ML workflows.",
+      "material": "Load datasets, clean missing values, and compute summary statistics."
+    },
+    "modelTraining": {
+      "title": "Model Training",
+      "description": "Train and evaluate a simple classifier.",
+      "material": "Split data, fit a baseline model, and review accuracy metrics."
+    }
+  },
   "authPage": {
     "login": {
       "title": "Welcome back",

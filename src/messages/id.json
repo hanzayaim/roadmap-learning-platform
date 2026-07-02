@@ -28,6 +28,133 @@
     "title": "Peringkat",
     "comingSoon": "Halaman peringkat akan hadir di Fase 4."
   },
+  "explorePage": {
+    "searchPlaceholder": "Cari kategori atau roadmap...",
+    "categoriesTitle": "Jelajahi kategori",
+    "categoriesDescription": "Pilih bidang dan mulai jalur belajar terstruktur.",
+    "trendingTitle": "Roadmap trending",
+    "trendingDescription": "Jalur populer yang sedang dipelajari sekarang.",
+    "roadmapCount": "{count} roadmap",
+    "nodeCount": "{count} node",
+    "viewRoadmap": "Lihat roadmap",
+    "noResults": "Tidak ada hasil untuk \"{query}\".",
+    "subcategoriesDescription": "Pilih topik untuk melihat roadmap yang tersedia.",
+    "roadmapsDescription": "Pilih roadmap untuk mulai belajar.",
+    "backToHome": "Kembali ke beranda",
+    "backToSubcategories": "Kembali ke sub-kategori"
+  },
+  "vote": {
+    "upvote": "Dukung",
+    "downvote": "Tidak dukung"
+  },
+  "categories": {
+    "programming": "Pemrograman",
+    "design": "Desain",
+    "dataScience": "Data Science",
+    "devops": "DevOps"
+  },
+  "subcategories": {
+    "webDevelopment": "Pengembangan Web",
+    "mobileDevelopment": "Pengembangan Mobile",
+    "backendDevelopment": "Pengembangan Backend",
+    "uiDesign": "Desain UI",
+    "uxResearch": "Riset UX",
+    "machineLearning": "Machine Learning",
+    "cloudInfrastructure": "Infrastruktur Cloud"
+  },
+  "roadmaps": {
+    "frontendFundamentals": "Fundamental Frontend",
+    "frontendFundamentalsDesc": "Dasar HTML, CSS, dan JavaScript untuk pengembangan web.",
+    "reactMastery": "Mahir React",
+    "reactMasteryDesc": "Pola komponen, hooks, dan state management dengan React.",
+    "nodejsBasics": "Dasar Node.js",
+    "nodejsBasicsDesc": "Bangun API dan aplikasi server-side dengan Node.js.",
+    "flutterStarter": "Pengenalan Flutter",
+    "flutterStarterDesc": "Aplikasi mobile lintas platform dengan Flutter dan Dart.",
+    "figmaWorkflow": "Alur Kerja Figma",
+    "figmaWorkflowDesc": "Design system dan prototyping di Figma.",
+    "pythonMlIntro": "Pengenalan ML Python",
+    "pythonMlIntroDesc": "Dasar machine learning dengan Python."
+  },
+  "roadmapPage": {
+    "learningPath": "Jalur belajar",
+    "learningPathDescription": "Klik node untuk melihat materi belajar.",
+    "openMaterial": "Lihat materi",
+    "materialTitle": "Materi belajar",
+    "coinPrice": "Harga: {coin} koin"
+  },
+  "roadmapNodes": {
+    "htmlBasics": {
+      "title": "Dasar HTML",
+      "description": "Pelajari tag HTML semantik dan struktur dokumen.",
+      "material": "Pelajari elemen HTML inti: heading, paragraf, list, link, dan form. Latihan membuat kerangka landing page sederhana."
+    },
+    "cssLayout": {
+      "title": "Layout CSS",
+      "description": "Kuasai flexbox, grid, dan desain responsif.",
+      "material": "Review teknik layout CSS modern dan buat card layout responsif dari mobile ke desktop."
+    },
+    "javascriptIntro": {
+      "title": "Pengenalan JavaScript",
+      "description": "Variabel, fungsi, dan manipulasi DOM.",
+      "material": "Pelajari fundamental JS dan hubungkan interaksi tombol untuk memperbarui DOM tanpa framework."
+    },
+    "componentsProps": {
+      "title": "Komponen & Props",
+      "description": "Susun UI reusable dengan props.",
+      "material": "Pecah UI menjadi komponen dan kirim data lewat props dengan interface TypeScript."
+    },
+    "hooksState": {
+      "title": "Hooks & State",
+      "description": "Kelola state lokal dengan useState dan useEffect.",
+      "material": "Latihan controlled input, derived state, dan side effect di functional component."
+    },
+    "dataFetching": {
+      "title": "Data Fetching",
+      "description": "Muat data remote di aplikasi React.",
+      "material": "Fetch JSON dari endpoint mock dan render state loading serta empty."
+    },
+    "nodeRuntime": {
+      "title": "Node Runtime",
+      "description": "Pahami event loop dan modul.",
+      "material": "Jelajahi CommonJS vs ESM dan cara Node menangani async I/O."
+    },
+    "expressApi": {
+      "title": "Express API",
+      "description": "Buat endpoint REST dengan Express.",
+      "material": "Bangun route CRUD, middleware, dan error handling dasar untuk mock API."
+    },
+    "dartBasics": {
+      "title": "Dasar Dart",
+      "description": "Sintaks bahasa dan null safety.",
+      "material": "Pelajari tipe Dart, koleksi, dan pola null-safe yang dipakai di Flutter."
+    },
+    "widgetTree": {
+      "title": "Widget Tree",
+      "description": "Susun layar dengan widget Flutter.",
+      "material": "Latihan stateless vs stateful widget dan layout dengan Column, Row, dan ListView."
+    },
+    "designTokens": {
+      "title": "Design Tokens",
+      "description": "Sistem warna, spacing, dan tipografi.",
+      "material": "Definisikan token di Figma dan terapkan ke seluruh komponen."
+    },
+    "prototyping": {
+      "title": "Prototyping",
+      "description": "Alur interaktif dan handoff.",
+      "material": "Hubungkan layar dengan transisi dan anotasi spesifikasi untuk developer."
+    },
+    "numpyPandas": {
+      "title": "NumPy & Pandas",
+      "description": "Persiapan data untuk workflow ML.",
+      "material": "Muat dataset, bersihkan nilai kosong, dan hitung statistik ringkasan."
+    },
+    "modelTraining": {
+      "title": "Pelatihan Model",
+      "description": "Latih dan evaluasi classifier sederhana.",
+      "material": "Split data, fit model baseline, dan tinjau metrik akurasi."
+    }
+  },
   "authPage": {
     "login": {
       "title": "Selamat datang kembali",
