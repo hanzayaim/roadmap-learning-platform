@@ -1,5 +1,6 @@
-# Documentation (local only — do not push)
+# Documentation lives in ../roadmap-learning-platform-md (except README)
 *.md
+!README.md
 
 # Dependencies
 /node_modules
