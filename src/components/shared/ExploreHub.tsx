@@ -10,6 +10,7 @@ import {
 } from "@/components/shared/ExploreCardsClient";
 import { Input } from "@/components/ui/input";
 import type { Category, Roadmap } from "@/types/roadmap";
+import { countRoadmapNodes } from "@/utils/roadmap-tree";
 
 interface ExploreHubProps {
   categories: Array<Category & { roadmapCount: number }>;
@@ -108,7 +109,9 @@ export function ExploreHub({ categories, trendingRoadmaps }: ExploreHubProps) {
                 href={`/roadmap/${roadmap.slug}`}
                 title={tRoadmaps(roadmap.titleKey)}
                 description={tRoadmaps(roadmap.descriptionKey)}
-                nodeCountLabel={t("nodeCount", { count: roadmap.nodes.length })}
+                nodeCountLabel={t("nodeCount", {
+                  count: countRoadmapNodes(roadmap.nodes),
+                })}
                 initialVotes={roadmap.initialVotes}
                 viewRoadmapLabel={t("viewRoadmap")}
                 upvoteLabel={tVote("upvote")}

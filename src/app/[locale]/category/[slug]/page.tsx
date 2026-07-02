@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import {
   getCategoryBySlug,
   getSubcategoriesByCategorySlug,
+  getAllCategorySlugs,
 } from "@/data/categories";
 import { getRoadmapsBySubcategory } from "@/data/roadmaps";
 import { Link } from "@/i18n/navigation";
@@ -59,9 +60,6 @@ export default async function CategoryPage({
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
-    ["programming", "design", "data-science", "devops"].map((slug) => ({
-      locale,
-      slug,
-    })),
+    getAllCategorySlugs().map((slug) => ({ locale, slug })),
   );
 }

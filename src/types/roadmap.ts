@@ -1,7 +1,9 @@
+import type { CategoryIcon } from "@/lib/category-icons";
+
 export interface Category {
   slug: string;
   titleKey: string;
-  icon: "code" | "palette" | "database" | "server";
+  icon: CategoryIcon;
 }
 
 export interface Subcategory {
@@ -10,11 +12,13 @@ export interface Subcategory {
   titleKey: string;
 }
 
+export type RoadmapNodeType = "root" | "topic" | "subtopic" | "optional";
+
 export interface RoadmapNode {
   id: string;
   titleKey: string;
-  descriptionKey: string;
-  order: number;
+  parentId: string | null;
+  nodeType?: RoadmapNodeType;
 }
 
 export interface Roadmap {
@@ -26,4 +30,8 @@ export interface Roadmap {
   initialVotes: number;
   coinPrice: number;
   nodes: RoadmapNode[];
+}
+
+export interface RoadmapTreeNode extends RoadmapNode {
+  children: RoadmapTreeNode[];
 }

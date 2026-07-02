@@ -1,6 +1,6 @@
 {
   "layout": {
-    "brandName": "Roadmap Learning",
+    "brandName": "BelajarYuk",
     "nav": {
       "home": "Home",
       "explore": "Explore",
@@ -10,14 +10,15 @@
       "logout": "Log out"
     },
     "footer": {
-      "copyright": "© {year} Roadmap Learning Platform",
-      "tagline": "Learn with structured roadmaps"
-    }
+      "copyright": "© {year} BelajarYuk",
+      "tagline": "Interactive learning paths across many fields."
+    },
+    "themeLight": "Switch to light mode",
+    "themeDark": "Switch to dark mode"
   },
   "homePage": {
-    "heroTitle": "Master skills with guided roadmaps",
-    "heroSubtitle": "Explore learning paths, track progress, and climb the leaderboard — all in one place.",
-    "ctaExplore": "Start exploring"
+    "heroTitle": "Learn with interactive roadmaps",
+    "heroSubtitle": "Browse topics by field, follow each step, and open study materials along the way."
   },
   "languageSwitcher": {
     "label": "Language",
@@ -72,11 +73,11 @@
     }
   },
   "explorePage": {
-    "searchPlaceholder": "Search categories or roadmaps...",
-    "categoriesTitle": "Browse categories",
-    "categoriesDescription": "Pick a field and dive into structured learning paths.",
-    "trendingTitle": "Trending roadmaps",
-    "trendingDescription": "Popular paths learners are exploring right now.",
+    "searchPlaceholder": "Search topics or learning roadmaps...",
+    "categoriesTitle": "Browse by field",
+    "categoriesDescription": "Architecture, IT, finance, healthcare, creative, business, and more.",
+    "trendingTitle": "Popular learning roadmaps",
+    "trendingDescription": "Roadmaps learners are following right now.",
     "roadmapCount": "{count} roadmaps",
     "nodeCount": "{count} nodes",
     "viewRoadmap": "View roadmap",
@@ -91,111 +92,247 @@
     "downvote": "Downvote"
   },
   "categories": {
-    "programming": "Programming",
-    "design": "Design",
-    "dataScience": "Data Science",
-    "devops": "DevOps"
+    "architecture": "Architecture",
+    "it": "Information Technology",
+    "finance": "Finance",
+    "healthcare": "Healthcare",
+    "creative": "Creative Industries",
+    "business": "Business & Management"
   },
   "subcategories": {
-    "webDevelopment": "Web Development",
-    "mobileDevelopment": "Mobile Development",
-    "backendDevelopment": "Backend Development",
-    "uiDesign": "UI Design",
-    "uxResearch": "UX Research",
-    "machineLearning": "Machine Learning",
-    "cloudInfrastructure": "Cloud Infrastructure"
+    "residentialDesign": "Residential Design",
+    "urbanPlanning": "Urban Planning",
+    "softwareEngineering": "Software Engineering",
+    "dataAnalytics": "Data Analytics",
+    "cybersecurity": "Cybersecurity",
+    "financialPlanning": "Financial Planning",
+    "investmentBanking": "Investment Banking",
+    "accounting": "Accounting",
+    "nursingPathway": "Nursing Pathway",
+    "publicHealth": "Public Health",
+    "graphicDesign": "Graphic Design",
+    "contentCreation": "Content Creation",
+    "marketing": "Marketing",
+    "entrepreneurship": "Entrepreneurship"
   },
   "roadmaps": {
-    "frontendFundamentals": "Frontend Fundamentals",
-    "frontendFundamentalsDesc": "HTML, CSS, and JavaScript essentials for web development.",
-    "reactMastery": "React Mastery",
-    "reactMasteryDesc": "Component patterns, hooks, and state management with React.",
-    "nodejsBasics": "Node.js Basics",
-    "nodejsBasicsDesc": "Build APIs and server-side apps with Node.js.",
-    "flutterStarter": "Flutter Starter",
-    "flutterStarterDesc": "Cross-platform mobile apps with Flutter and Dart.",
-    "figmaWorkflow": "Figma Workflow",
-    "figmaWorkflowDesc": "Design systems and prototyping in Figma.",
-    "pythonMlIntro": "Python ML Intro",
-    "pythonMlIntroDesc": "Machine learning foundations with Python."
+    "softwareEngineerCareer": "Software Engineer Career Path",
+    "softwareEngineerCareerDesc": "Programming fundamentals, tools, and your first portfolio.",
+    "financialAnalystCareer": "Financial Analyst Career Path",
+    "financialAnalystCareerDesc": "Understand finance industry roles, skills, and certification pathways.",
+    "architectCareer": "Architect Career Path",
+    "architectCareerDesc": "Explore architecture from technical drawing to design portfolio.",
+    "nursingCareer": "Nursing Career Path",
+    "nursingCareerDesc": "A guided path into nursing — from health sciences to clinical practice.",
+    "marketingStrategist": "Marketing Strategist Path",
+    "marketingStrategistDesc": "Learn how marketing careers work from research to digital strategy.",
+    "graphicDesignerPath": "Graphic Designer Path",
+    "graphicDesignerPathDesc": "Build creative fundamentals and a portfolio for design careers."
   },
   "roadmapPage": {
-    "learningPath": "Learning path",
-    "learningPathDescription": "Click a node to view study materials.",
+    "learningPath": "Learning roadmap",
+    "learningPathDescription": "Follow the branching path — click any node to open learning materials.",
     "openMaterial": "View material",
     "materialTitle": "Study material",
-    "coinPrice": "Price: {coin} coins"
+    "closeMaterial": "Close",
+    "coinPrice": "Price: {coin} coins",
+    "treeHint": "Solid = core path · Dashed = optional · Amber = specialization"
   },
   "roadmapNodes": {
+    "careerStart": {
+      "title": "Start Here",
+      "description": "Begin your career exploration journey.",
+      "material": "Understand what this roadmap covers, how long it may take, and what outcomes to expect before committing to a major or career switch."
+    },
+    "industryAwareness": {
+      "title": "Field Overview",
+      "description": "Get a clear picture of what this field covers.",
+      "material": "Read introductory guides and sample lessons to see what you will learn in this roadmap."
+    },
+    "programmingBasics": {
+      "title": "Programming Foundations",
+      "description": "Core building blocks for software careers.",
+      "material": "Get familiar with how code works, development environments, and problem-solving patterns."
+    },
     "htmlBasics": {
-      "title": "HTML Basics",
-      "description": "Learn semantic HTML tags and document structure.",
-      "material": "Study the core HTML elements: headings, paragraphs, lists, links, and forms. Practice building a simple landing page skeleton."
+      "title": "HTML",
+      "description": "Structure of web pages.",
+      "material": "Learn semantic HTML, forms, and accessibility basics."
     },
     "cssLayout": {
-      "title": "CSS Layout",
-      "description": "Master flexbox, grid, and responsive design.",
-      "material": "Review modern CSS layout techniques and build responsive card layouts that adapt from mobile to desktop."
+      "title": "CSS",
+      "description": "Styling and layout for the web.",
+      "material": "Practice flexbox, grid, and responsive design."
     },
     "javascriptIntro": {
-      "title": "JavaScript Intro",
-      "description": "Variables, functions, and DOM manipulation.",
-      "material": "Learn JS fundamentals and connect button interactions to update the DOM without a framework."
+      "title": "JavaScript",
+      "description": "Interactivity and logic on the web.",
+      "material": "Variables, functions, DOM APIs, and async basics."
     },
-    "componentsProps": {
-      "title": "Components & Props",
-      "description": "Compose reusable UI with props.",
-      "material": "Break UI into components and pass data through props with TypeScript interfaces."
+    "reactBasics": {
+      "title": "React",
+      "description": "Component-based UI library.",
+      "material": "Build interfaces with components, props, and hooks."
     },
-    "hooksState": {
-      "title": "Hooks & State",
-      "description": "Manage local state with useState and useEffect.",
-      "material": "Practice controlled inputs, derived state, and side effects in functional components."
+    "nodeBasics": {
+      "title": "Node.js (Optional)",
+      "description": "Server-side JavaScript.",
+      "material": "Explore APIs, modules, and backend fundamentals."
     },
-    "dataFetching": {
-      "title": "Data Fetching",
-      "description": "Load remote data in React apps.",
-      "material": "Fetch JSON from mock endpoints and render loading and empty states."
+    "gitWorkflow": {
+      "title": "Git (Optional)",
+      "description": "Version control for teams.",
+      "material": "Commits, branches, pull requests, and collaboration."
     },
-    "nodeRuntime": {
-      "title": "Node Runtime",
-      "description": "Understand the event loop and modules.",
-      "material": "Explore CommonJS vs ESM modules and how Node handles async I/O."
+    "portfolioProject": {
+      "title": "Portfolio Project",
+      "description": "Prove your skills to employers.",
+      "material": "Ship a small full-stack or frontend project for your portfolio."
     },
-    "expressApi": {
-      "title": "Express API",
-      "description": "Create REST endpoints with Express.",
-      "material": "Build CRUD routes, middleware, and basic error handling for a mock API."
+    "financeIndustryOverview": {
+      "title": "Finance Industry Overview",
+      "description": "Roles across banking, FP&A, and advisory.",
+      "material": "Map career tracks, certifications, and typical entry points."
     },
-    "dartBasics": {
-      "title": "Dart Basics",
-      "description": "Language syntax and null safety.",
-      "material": "Learn Dart types, collections, and null-safe patterns used in Flutter."
+    "accountingBasics": {
+      "title": "Accounting Basics",
+      "description": "Financial statements and bookkeeping.",
+      "material": "Balance sheet, income statement, cash flow, and journal entries."
     },
-    "widgetTree": {
-      "title": "Widget Tree",
-      "description": "Compose screens with Flutter widgets.",
-      "material": "Practice stateless vs stateful widgets and layout with Column, Row, and ListView."
+    "excelModeling": {
+      "title": "Excel & Modeling",
+      "description": "Spreadsheet skills for analysts.",
+      "material": "Formulas, pivot tables, and three-statement models."
     },
-    "designTokens": {
-      "title": "Design Tokens",
-      "description": "Colors, spacing, and typography systems.",
-      "material": "Define token libraries in Figma and apply them across components."
+    "valuationIntro": {
+      "title": "Valuation Intro",
+      "description": "How companies are valued.",
+      "material": "DCF, comparables, and basic M&A concepts."
     },
-    "prototyping": {
-      "title": "Prototyping",
-      "description": "Interactive flows and handoff.",
-      "material": "Link screens with transitions and annotate specs for developers."
+    "fpnaSkills": {
+      "title": "FP&A Skills",
+      "description": "Financial planning & analysis.",
+      "material": "Budgeting, forecasting, and stakeholder reporting."
     },
-    "numpyPandas": {
-      "title": "NumPy & Pandas",
-      "description": "Data preparation for ML workflows.",
-      "material": "Load datasets, clean missing values, and compute summary statistics."
+    "cfaPrep": {
+      "title": "CFA Prep (Optional)",
+      "description": "Chartered Financial Analyst pathway.",
+      "material": "Overview of CFA levels and study plan."
     },
-    "modelTraining": {
-      "title": "Model Training",
-      "description": "Train and evaluate a simple classifier.",
-      "material": "Split data, fit a baseline model, and review accuracy metrics."
+    "architectureIndustryOverview": {
+      "title": "Architecture Industry Overview",
+      "description": "From studios to construction sites.",
+      "material": "Understand architect vs drafter vs urban planner roles."
+    },
+    "technicalDrawing": {
+      "title": "Technical Drawing",
+      "description": "Drafting fundamentals.",
+      "material": "Plans, sections, elevations, and scale."
+    },
+    "architecturalHistory": {
+      "title": "Architectural History",
+      "description": "Styles and movements.",
+      "material": "Survey key periods and influential architects."
+    },
+    "cadSoftware": {
+      "title": "CAD Software",
+      "description": "Digital drafting tools.",
+      "material": "Hands-on with AutoCAD or similar tools."
+    },
+    "bimFundamentals": {
+      "title": "BIM Fundamentals",
+      "description": "Building Information Modeling.",
+      "material": "3D models, coordination, and clash detection."
+    },
+    "sustainableDesign": {
+      "title": "Sustainable Design (Optional)",
+      "description": "Green building principles.",
+      "material": "Passive design, materials, and certifications."
+    },
+    "designPortfolio": {
+      "title": "Design Portfolio",
+      "description": "Present your architectural work.",
+      "material": "Curate boards, models, and case studies."
+    },
+    "healthcareIndustryOverview": {
+      "title": "Healthcare Industry Overview",
+      "description": "Hospital, clinic, and community care.",
+      "material": "Explore nursing vs doctor vs allied health paths."
+    },
+    "healthSciences": {
+      "title": "Health Sciences",
+      "description": "Scientific foundation for care roles.",
+      "material": "Biology, chemistry, and patient safety basics."
+    },
+    "anatomyBasics": {
+      "title": "Anatomy Basics",
+      "description": "Human body systems.",
+      "material": "Organs, systems, and clinical relevance."
+    },
+    "clinicalPractice": {
+      "title": "Clinical Practice",
+      "description": "Hands-on patient care.",
+      "material": "Vitals, hygiene protocols, and bedside skills."
+    },
+    "nursingSpecialty": {
+      "title": "Nursing Specialty",
+      "description": "Pediatric, ER, or other tracks.",
+      "material": "Compare specialty requirements and lifestyle."
+    },
+    "licensingExam": {
+      "title": "Licensing Exam",
+      "description": "Professional certification step.",
+      "material": "Exam format, prep resources, and timelines."
+    },
+    "businessIndustryOverview": {
+      "title": "Business Industry Overview",
+      "description": "Marketing, ops, and strategy roles.",
+      "material": "Map business functions and career ladders."
+    },
+    "marketResearch": {
+      "title": "Market Research",
+      "description": "Understand customers and competitors.",
+      "material": "Surveys, interviews, and insight synthesis."
+    },
+    "brandStrategy": {
+      "title": "Brand Strategy",
+      "description": "Positioning and messaging.",
+      "material": "Brand pillars, tone of voice, and campaigns."
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "Online channels and growth.",
+      "material": "SEO, social ads, email, and content funnels."
+    },
+    "marketingAnalytics": {
+      "title": "Marketing Analytics",
+      "description": "Measure what works.",
+      "material": "KPIs, attribution, and dashboard basics."
+    },
+    "creativeIndustryOverview": {
+      "title": "Creative Industry Overview",
+      "description": "Design, media, and content careers.",
+      "material": "Freelance vs agency vs in-house paths."
+    },
+    "designPrinciples": {
+      "title": "Design Principles",
+      "description": "Visual fundamentals.",
+      "material": "Hierarchy, contrast, alignment, and balance."
+    },
+    "typographyBasics": {
+      "title": "Typography",
+      "description": "Type selection and pairing.",
+      "material": "Fonts, readability, and layout rhythm."
+    },
+    "designTools": {
+      "title": "Design Tools",
+      "description": "Figma, Illustrator, or similar.",
+      "material": "Build mockups and export assets."
+    },
+    "creativePortfolio": {
+      "title": "Creative Portfolio",
+      "description": "Showcase your best work.",
+      "material": "Case studies with process and outcomes."
     }
   },
   "authPage": {

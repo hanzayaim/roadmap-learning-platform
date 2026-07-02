@@ -1,6 +1,6 @@
 {
   "layout": {
-    "brandName": "Roadmap Learning",
+    "brandName": "BelajarYuk",
     "nav": {
       "home": "Beranda",
       "explore": "Jelajahi",
@@ -10,14 +10,15 @@
       "logout": "Keluar"
     },
     "footer": {
-      "copyright": "© {year} Roadmap Learning Platform",
-      "tagline": "Belajar dengan roadmap terstruktur"
-    }
+      "copyright": "© {year} BelajarYuk",
+      "tagline": "Jalur belajar interaktif di berbagai bidang."
+    },
+    "themeLight": "Mode terang",
+    "themeDark": "Mode gelap"
   },
   "homePage": {
-    "heroTitle": "Kuasai skill dengan roadmap terpandu",
-    "heroSubtitle": "Jelajahi jalur belajar, lacak progres, dan naik peringkat — semua dalam satu tempat.",
-    "ctaExplore": "Mulai menjelajah"
+    "heroTitle": "Belajar dengan roadmap interaktif",
+    "heroSubtitle": "Jelajahi topik per bidang, ikuti setiap langkah, dan buka materi belajar di sepanjang jalur."
   },
   "languageSwitcher": {
     "label": "Bahasa",
@@ -72,11 +73,11 @@
     }
   },
   "explorePage": {
-    "searchPlaceholder": "Cari kategori atau roadmap...",
-    "categoriesTitle": "Jelajahi kategori",
-    "categoriesDescription": "Pilih bidang dan mulai jalur belajar terstruktur.",
-    "trendingTitle": "Roadmap trending",
-    "trendingDescription": "Jalur populer yang sedang dipelajari sekarang.",
+    "searchPlaceholder": "Cari topik atau roadmap belajar...",
+    "categoriesTitle": "Jelajahi per bidang",
+    "categoriesDescription": "Arsitektur, IT, keuangan, kesehatan, kreatif, bisnis, dan lainnya.",
+    "trendingTitle": "Roadmap belajar populer",
+    "trendingDescription": "Jalur yang sedang banyak diikuti pelajar.",
     "roadmapCount": "{count} roadmap",
     "nodeCount": "{count} node",
     "viewRoadmap": "Lihat roadmap",
@@ -91,111 +92,247 @@
     "downvote": "Tidak dukung"
   },
   "categories": {
-    "programming": "Pemrograman",
-    "design": "Desain",
-    "dataScience": "Data Science",
-    "devops": "DevOps"
+    "architecture": "Arsitektur",
+    "it": "Teknologi Informasi",
+    "finance": "Keuangan",
+    "healthcare": "Kesehatan",
+    "creative": "Industri Kreatif",
+    "business": "Bisnis & Manajemen"
   },
   "subcategories": {
-    "webDevelopment": "Pengembangan Web",
-    "mobileDevelopment": "Pengembangan Mobile",
-    "backendDevelopment": "Pengembangan Backend",
-    "uiDesign": "Desain UI",
-    "uxResearch": "Riset UX",
-    "machineLearning": "Machine Learning",
-    "cloudInfrastructure": "Infrastruktur Cloud"
+    "residentialDesign": "Desain Residential",
+    "urbanPlanning": "Perencanaan Kota",
+    "softwareEngineering": "Software Engineering",
+    "dataAnalytics": "Analitik Data",
+    "cybersecurity": "Keamanan Siber",
+    "financialPlanning": "Perencanaan Keuangan",
+    "investmentBanking": "Investment Banking",
+    "accounting": "Akuntansi",
+    "nursingPathway": "Jalur Keperawatan",
+    "publicHealth": "Kesehatan Masyarakat",
+    "graphicDesign": "Desain Grafis",
+    "contentCreation": "Content Creation",
+    "marketing": "Pemasaran",
+    "entrepreneurship": "Kewirausahaan"
   },
   "roadmaps": {
-    "frontendFundamentals": "Fundamental Frontend",
-    "frontendFundamentalsDesc": "Dasar HTML, CSS, dan JavaScript untuk pengembangan web.",
-    "reactMastery": "Mahir React",
-    "reactMasteryDesc": "Pola komponen, hooks, dan state management dengan React.",
-    "nodejsBasics": "Dasar Node.js",
-    "nodejsBasicsDesc": "Bangun API dan aplikasi server-side dengan Node.js.",
-    "flutterStarter": "Pengenalan Flutter",
-    "flutterStarterDesc": "Aplikasi mobile lintas platform dengan Flutter dan Dart.",
-    "figmaWorkflow": "Alur Kerja Figma",
-    "figmaWorkflowDesc": "Design system dan prototyping di Figma.",
-    "pythonMlIntro": "Pengenalan ML Python",
-    "pythonMlIntroDesc": "Dasar machine learning dengan Python."
+    "softwareEngineerCareer": "Jalur Karier Software Engineer",
+    "softwareEngineerCareerDesc": "Dasar pemrograman, tools, dan portofolio pertamamu.",
+    "financialAnalystCareer": "Jalur Karier Financial Analyst",
+    "financialAnalystCareerDesc": "Pahami peran, skill, dan sertifikasi di industri keuangan.",
+    "architectCareer": "Jalur Karier Arsitek",
+    "architectCareerDesc": "Eksplorasi arsitektur dari gambar teknik hingga portofolio desain.",
+    "nursingCareer": "Jalur Karier Perawat",
+    "nursingCareerDesc": "Panduan memasuki dunia keperawatan — dari ilmu kesehatan hingga praktik klinis.",
+    "marketingStrategist": "Jalur Marketing Strategist",
+    "marketingStrategistDesc": "Pelajari karier marketing dari riset pasar hingga strategi digital.",
+    "graphicDesignerPath": "Jalur Desainer Grafis",
+    "graphicDesignerPathDesc": "Bangun fundamental kreatif dan portofolio untuk karier desain."
   },
   "roadmapPage": {
-    "learningPath": "Jalur belajar",
-    "learningPathDescription": "Klik node untuk melihat materi belajar.",
+    "learningPath": "Roadmap belajar",
+    "learningPathDescription": "Ikuti jalur bercabang — klik node untuk membuka materi belajar.",
     "openMaterial": "Lihat materi",
     "materialTitle": "Materi belajar",
-    "coinPrice": "Harga: {coin} koin"
+    "closeMaterial": "Tutup",
+    "coinPrice": "Harga: {coin} koin",
+    "treeHint": "Solid = jalur inti · Putus-putus = opsional · Amber = spesialisasi"
   },
   "roadmapNodes": {
+    "careerStart": {
+      "title": "Mulai Di Sini",
+      "description": "Awali perjalanan eksplorasi kariermu.",
+      "material": "Pahami cakupan roadmap, estimasi waktu, dan hasil yang diharapkan sebelum memilih jurusan atau berpindah karier."
+    },
+    "industryAwareness": {
+      "title": "Gambaran Bidang",
+      "description": "Kenali cakupan dan topik yang akan dipelajari.",
+      "material": "Baca panduan pengantar dan contoh materi untuk melihat apa yang akan kamu pelajari di roadmap ini."
+    },
+    "programmingBasics": {
+      "title": "Dasar Pemrograman",
+      "description": "Fondasi untuk karier software.",
+      "material": "Kenali cara kerja kode, environment development, dan pola problem-solving."
+    },
     "htmlBasics": {
-      "title": "Dasar HTML",
-      "description": "Pelajari tag HTML semantik dan struktur dokumen.",
-      "material": "Pelajari elemen HTML inti: heading, paragraf, list, link, dan form. Latihan membuat kerangka landing page sederhana."
+      "title": "HTML",
+      "description": "Struktur halaman web.",
+      "material": "Pelajari HTML semantik, form, dan dasar aksesibilitas."
     },
     "cssLayout": {
-      "title": "Layout CSS",
-      "description": "Kuasai flexbox, grid, dan desain responsif.",
-      "material": "Review teknik layout CSS modern dan buat card layout responsif dari mobile ke desktop."
+      "title": "CSS",
+      "description": "Styling dan layout web.",
+      "material": "Latihan flexbox, grid, dan desain responsif."
     },
     "javascriptIntro": {
-      "title": "Pengenalan JavaScript",
-      "description": "Variabel, fungsi, dan manipulasi DOM.",
-      "material": "Pelajari fundamental JS dan hubungkan interaksi tombol untuk memperbarui DOM tanpa framework."
+      "title": "JavaScript",
+      "description": "Interaktivitas dan logika di web.",
+      "material": "Variabel, fungsi, DOM API, dan dasar async."
     },
-    "componentsProps": {
-      "title": "Komponen & Props",
-      "description": "Susun UI reusable dengan props.",
-      "material": "Pecah UI menjadi komponen dan kirim data lewat props dengan interface TypeScript."
+    "reactBasics": {
+      "title": "React",
+      "description": "Library UI berbasis komponen.",
+      "material": "Bangun antarmuka dengan komponen, props, dan hooks."
     },
-    "hooksState": {
-      "title": "Hooks & State",
-      "description": "Kelola state lokal dengan useState dan useEffect.",
-      "material": "Latihan controlled input, derived state, dan side effect di functional component."
+    "nodeBasics": {
+      "title": "Node.js (Opsional)",
+      "description": "JavaScript di sisi server.",
+      "material": "Eksplorasi API, modul, dan fundamental backend."
     },
-    "dataFetching": {
-      "title": "Data Fetching",
-      "description": "Muat data remote di aplikasi React.",
-      "material": "Fetch JSON dari endpoint mock dan render state loading serta empty."
+    "gitWorkflow": {
+      "title": "Git (Opsional)",
+      "description": "Version control untuk tim.",
+      "material": "Commit, branch, pull request, dan kolaborasi."
     },
-    "nodeRuntime": {
-      "title": "Node Runtime",
-      "description": "Pahami event loop dan modul.",
-      "material": "Jelajahi CommonJS vs ESM dan cara Node menangani async I/O."
+    "portfolioProject": {
+      "title": "Proyek Portofolio",
+      "description": "Buktikan skill ke pemberi kerja.",
+      "material": "Rilis proyek kecil full-stack atau frontend untuk portofolio."
     },
-    "expressApi": {
-      "title": "Express API",
-      "description": "Buat endpoint REST dengan Express.",
-      "material": "Bangun route CRUD, middleware, dan error handling dasar untuk mock API."
+    "financeIndustryOverview": {
+      "title": "Gambaran Industri Keuangan",
+      "description": "Peran di banking, FP&A, dan advisory.",
+      "material": "Peta jalur karier, sertifikasi, dan titik masuk umum."
     },
-    "dartBasics": {
-      "title": "Dasar Dart",
-      "description": "Sintaks bahasa dan null safety.",
-      "material": "Pelajari tipe Dart, koleksi, dan pola null-safe yang dipakai di Flutter."
+    "accountingBasics": {
+      "title": "Dasar Akuntansi",
+      "description": "Laporan keuangan dan pembukuan.",
+      "material": "Neraca, laba rugi, arus kas, dan jurnal."
     },
-    "widgetTree": {
-      "title": "Widget Tree",
-      "description": "Susun layar dengan widget Flutter.",
-      "material": "Latihan stateless vs stateful widget dan layout dengan Column, Row, dan ListView."
+    "excelModeling": {
+      "title": "Excel & Modeling",
+      "description": "Skill spreadsheet untuk analis.",
+      "material": "Rumus, pivot table, dan model tiga laporan."
     },
-    "designTokens": {
-      "title": "Design Tokens",
-      "description": "Sistem warna, spacing, dan tipografi.",
-      "material": "Definisikan token di Figma dan terapkan ke seluruh komponen."
+    "valuationIntro": {
+      "title": "Pengenalan Valuasi",
+      "description": "Cara menilai perusahaan.",
+      "material": "DCF, comparable, dan konsep M&A dasar."
     },
-    "prototyping": {
-      "title": "Prototyping",
-      "description": "Alur interaktif dan handoff.",
-      "material": "Hubungkan layar dengan transisi dan anotasi spesifikasi untuk developer."
+    "fpnaSkills": {
+      "title": "Skill FP&A",
+      "description": "Financial planning & analysis.",
+      "material": "Budgeting, forecasting, dan pelaporan ke stakeholder."
     },
-    "numpyPandas": {
-      "title": "NumPy & Pandas",
-      "description": "Persiapan data untuk workflow ML.",
-      "material": "Muat dataset, bersihkan nilai kosong, dan hitung statistik ringkasan."
+    "cfaPrep": {
+      "title": "Persiapan CFA (Opsional)",
+      "description": "Jalur Chartered Financial Analyst.",
+      "material": "Gambaran level CFA dan rencana belajar."
     },
-    "modelTraining": {
-      "title": "Pelatihan Model",
-      "description": "Latih dan evaluasi classifier sederhana.",
-      "material": "Split data, fit model baseline, dan tinjau metrik akurasi."
+    "architectureIndustryOverview": {
+      "title": "Gambaran Industri Arsitektur",
+      "description": "Dari studio hingga lapangan.",
+      "material": "Pahami perbedaan arsitek, drafter, dan perencana kota."
+    },
+    "technicalDrawing": {
+      "title": "Gambar Teknik",
+      "description": "Dasar drafting.",
+      "material": "Plan, section, elevation, dan skala."
+    },
+    "architecturalHistory": {
+      "title": "Sejarah Arsitektur",
+      "description": "Gaya dan aliran.",
+      "material": "Tinjau periode penting dan arsitek berpengaruh."
+    },
+    "cadSoftware": {
+      "title": "Software CAD",
+      "description": "Alat drafting digital.",
+      "material": "Praktik AutoCAD atau tools serupa."
+    },
+    "bimFundamentals": {
+      "title": "Dasar BIM",
+      "description": "Building Information Modeling.",
+      "material": "Model 3D, koordinasi, dan clash detection."
+    },
+    "sustainableDesign": {
+      "title": "Desain Berkelanjutan (Opsional)",
+      "description": "Prinsip bangunan hijau.",
+      "material": "Desain pasif, material, dan sertifikasi."
+    },
+    "designPortfolio": {
+      "title": "Portofolio Desain",
+      "description": "Presentasikan karya arsitekturmu.",
+      "material": "Kurasi board, model, dan studi kasus."
+    },
+    "healthcareIndustryOverview": {
+      "title": "Gambaran Industri Kesehatan",
+      "description": "Rumah sakit, klinik, dan layanan komunitas.",
+      "material": "Eksplorasi perawat vs dokter vs allied health."
+    },
+    "healthSciences": {
+      "title": "Ilmu Kesehatan",
+      "description": "Fondasi ilmiah untuk perawatan.",
+      "material": "Biologi, kimia, dan dasar keselamatan pasien."
+    },
+    "anatomyBasics": {
+      "title": "Dasar Anatomi",
+      "description": "Sistem tubuh manusia.",
+      "material": "Organ, sistem, dan relevansi klinis."
+    },
+    "clinicalPractice": {
+      "title": "Praktik Klinis",
+      "description": "Perawatan pasien langsung.",
+      "material": "Vital sign, protokol kebersihan, dan skill bedside."
+    },
+    "nursingSpecialty": {
+      "title": "Spesialisasi Keperawatan",
+      "description": "Pediatri, IGD, atau jalur lain.",
+      "material": "Bandingkan persyaratan dan gaya hidup tiap spesialisasi."
+    },
+    "licensingExam": {
+      "title": "Ujian Lisensi",
+      "description": "Langkah sertifikasi profesional.",
+      "material": "Format ujian, sumber belajar, dan timeline."
+    },
+    "businessIndustryOverview": {
+      "title": "Gambaran Industri Bisnis",
+      "description": "Marketing, operasi, dan strategi.",
+      "material": "Peta fungsi bisnis dan jenjang karier."
+    },
+    "marketResearch": {
+      "title": "Riset Pasar",
+      "description": "Pahami pelanggan dan kompetitor.",
+      "material": "Survei, wawancara, dan sintesis insight."
+    },
+    "brandStrategy": {
+      "title": "Strategi Brand",
+      "description": "Positioning dan pesan.",
+      "material": "Pilar brand, tone of voice, dan kampanye."
+    },
+    "digitalMarketing": {
+      "title": "Digital Marketing",
+      "description": "Channel online dan growth.",
+      "material": "SEO, iklan sosial, email, dan funnel konten."
+    },
+    "marketingAnalytics": {
+      "title": "Analitik Marketing",
+      "description": "Ukur apa yang berhasil.",
+      "material": "KPI, atribusi, dan dasar dashboard."
+    },
+    "creativeIndustryOverview": {
+      "title": "Gambaran Industri Kreatif",
+      "description": "Karier desain, media, dan konten.",
+      "material": "Freelance vs agency vs in-house."
+    },
+    "designPrinciples": {
+      "title": "Prinsip Desain",
+      "description": "Fundamental visual.",
+      "material": "Hierarki, kontras, alignment, dan balance."
+    },
+    "typographyBasics": {
+      "title": "Tipografi",
+      "description": "Pemilihan dan pasangan font.",
+      "material": "Font, keterbacaan, dan ritme layout."
+    },
+    "designTools": {
+      "title": "Tools Desain",
+      "description": "Figma, Illustrator, atau sejenisnya.",
+      "material": "Buat mockup dan export aset."
+    },
+    "creativePortfolio": {
+      "title": "Portofolio Kreatif",
+      "description": "Tampilkan karya terbaikmu.",
+      "material": "Studi kasus dengan proses dan hasil."
     }
   },
   "authPage": {

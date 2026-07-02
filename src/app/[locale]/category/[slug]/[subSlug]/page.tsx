@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import {
   getCategoryBySlug,
   getSubcategoryBySlug,
+  getAllSubcategoryParams,
 } from "@/data/categories";
 import { getRoadmapsBySubcategory } from "@/data/roadmaps";
 import { Link } from "@/i18n/navigation";
@@ -59,17 +60,11 @@ export default async function SubcategoryPage({
 }
 
 export function generateStaticParams() {
-  const pairs = [
-    { slug: "programming", subSlug: "web-development" },
-    { slug: "programming", subSlug: "mobile-development" },
-    { slug: "programming", subSlug: "backend-development" },
-    { slug: "design", subSlug: "ui-design" },
-    { slug: "design", subSlug: "ux-research" },
-    { slug: "data-science", subSlug: "machine-learning" },
-    { slug: "devops", subSlug: "cloud-infrastructure" },
-  ];
-
   return routing.locales.flatMap((locale) =>
-    pairs.map(({ slug, subSlug }) => ({ locale, slug, subSlug })),
+    getAllSubcategoryParams().map(({ slug, subSlug }) => ({
+      locale,
+      slug,
+      subSlug,
+    })),
   );
 }

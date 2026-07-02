@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RoadmapTree } from "@/components/shared/RoadmapTree";
 import { Button } from "@/components/ui/button";
 import { getCategoryBySlug, getSubcategoryBySlug } from "@/data/categories";
-import { getRoadmapBySlug } from "@/data/roadmaps";
+import { getRoadmapBySlug, getAllRoadmapSlugs } from "@/data/roadmaps";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
@@ -32,7 +32,7 @@ export default async function RoadmapDetailPage({
   );
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-8 space-y-4">
         <Button
           variant="ghost"
@@ -75,16 +75,7 @@ export default async function RoadmapDetailPage({
 }
 
 export function generateStaticParams() {
-  const slugs = [
-    "frontend-fundamentals",
-    "react-mastery",
-    "nodejs-basics",
-    "flutter-starter",
-    "figma-workflow",
-    "python-ml-intro",
-  ];
-
   return routing.locales.flatMap((locale) =>
-    slugs.map((slug) => ({ locale, slug })),
+    getAllRoadmapSlugs().map((slug) => ({ locale, slug })),
   );
 }

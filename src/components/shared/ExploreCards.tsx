@@ -1,4 +1,3 @@
-import { Code, Database, Palette, Server } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 import { VoteButtons } from "@/components/shared/VoteButtons";
@@ -13,14 +12,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
+import { categoryIconMap } from "@/lib/category-icons";
+import type { CategoryIcon } from "@/lib/category-icons";
 import type { Roadmap } from "@/types/roadmap";
-
-const iconMap = {
-  code: Code,
-  palette: Palette,
-  database: Database,
-  server: Server,
-} as const;
+import { countRoadmapNodes } from "@/utils/roadmap-tree";
 
 interface RoadmapCardProps {
   roadmap: Roadmap;
@@ -39,7 +34,7 @@ export async function RoadmapCard({ roadmap }: RoadmapCardProps) {
       </CardHeader>
       <CardContent className="flex-1">
         <Badge variant="secondary">
-          {tExplore("nodeCount", { count: roadmap.nodes.length })}
+          {tExplore("nodeCount", { count: countRoadmapNodes(roadmap.nodes) })}
         </Badge>
       </CardContent>
       <CardFooter className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -63,7 +58,7 @@ export async function RoadmapCard({ roadmap }: RoadmapCardProps) {
 interface CategoryCardProps {
   slug: string;
   titleKey: string;
-  icon: keyof typeof iconMap;
+  icon: CategoryIcon;
   roadmapCount: number;
 }
 
@@ -75,7 +70,7 @@ export async function CategoryCard({
 }: CategoryCardProps) {
   const t = await getTranslations("categories");
   const tExplore = await getTranslations("explorePage");
-  const Icon = iconMap[icon];
+  const Icon = categoryIconMap[icon];
 
   return (
     <Link href={`/category/${slug}`}>

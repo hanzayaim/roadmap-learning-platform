@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { VoteButtons } from "@/components/shared/VoteButtons";
 import { Badge } from "@/components/ui/badge";
@@ -13,12 +13,73 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import type { RoadmapNode } from "@/types/roadmap";
+import { cn } from "@/lib/utils";
+import type { RoadmapNode, RoadmapTreeNode } from "@/types/roadmap";
+import { buildRoadmapTree } from "@/utils/roadmap-tree";
 
 interface RoadmapTreeProps {
   nodes: RoadmapNode[];
   initialVotes: number;
   coinPrice: number;
+}
+
+function TreeBranch({
+  node,
+  onSelect,
+  getTitle,
+}: {
+  node: RoadmapTreeNode;
+  onSelect: (node: RoadmapNode) => void;
+  getTitle: (key: string) => string;
+}) {
+  const hasChildren = node.children.length > 0;
+
+  return (
+    <div className="flex flex-col items-center">
+      <button
+        type="button"
+        onClick={() => onSelect(node)}
+        className={cn(
+          "min-w-[9rem] max-w-[11rem] rounded-lg border px-3 py-2 text-center text-sm font-medium transition-colors hover:bg-muted/60",
+          node.nodeType === "root" && "border-primary bg-primary/10 text-primary",
+          node.nodeType === "optional" && "border-dashed text-muted-foreground",
+          node.nodeType === "subtopic" && "border-amber-500/40 bg-amber-500/5",
+          !node.nodeType || node.nodeType === "topic"
+            ? "border-border bg-card"
+            : undefined,
+        )}
+      >
+        {getTitle(node.titleKey)}
+      </button>
+
+      {hasChildren ? (
+        <div className="flex flex-col items-center">
+          <div className="h-6 w-px bg-border" />
+          <div className="relative flex items-start justify-center gap-6 px-2">
+            {node.children.length > 1 ? (
+              <div
+                className="absolute top-0 h-px bg-border"
+                style={{
+                  left: "12%",
+                  right: "12%",
+                }}
+              />
+            ) : null}
+            {node.children.map((child) => (
+              <div key={child.id} className="flex flex-col items-center pt-0">
+                <div className="h-4 w-px bg-border" />
+                <TreeBranch
+                  node={child}
+                  onSelect={onSelect}
+                  getTitle={getTitle}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
+    </div>
+  );
 }
 
 export function RoadmapTree({
@@ -31,7 +92,7 @@ export function RoadmapTree({
   const tVote = useTranslations("vote");
   const [selectedNode, setSelectedNode] = useState<RoadmapNode | null>(null);
 
-  const sortedNodes = [...nodes].sort((a, b) => a.order - b.order);
+  const tree = useMemo(() => buildRoadmapTree(nodes), [nodes]);
 
   return (
     <>
@@ -44,29 +105,21 @@ export function RoadmapTree({
         <Badge variant="outline">{t("coinPrice", { coin: coinPrice })}</Badge>
       </div>
 
-      <ol className="relative space-y-0 border-l border-border pl-6">
-        {sortedNodes.map((node, index) => (
-          <li key={node.id} className="relative pb-8 last:pb-0">
-            <span className="absolute top-1 -left-[1.65rem] flex size-6 items-center justify-center rounded-full border bg-background text-xs font-medium">
-              {index + 1}
-            </span>
-            <div className="rounded-lg border bg-card p-4">
-              <h3 className="font-medium">{tNodes(`${node.titleKey}.title`)}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {tNodes(`${node.titleKey}.description`)}
-              </p>
-              <Button
-                className="mt-3"
-                size="sm"
-                variant="outline"
-                onClick={() => setSelectedNode(node)}
-              >
-                {t("openMaterial")}
-              </Button>
-            </div>
-          </li>
-        ))}
-      </ol>
+      <div className="overflow-x-auto rounded-xl border bg-muted/20 p-6 sm:p-10">
+        {tree ? (
+          <div className="flex min-w-max justify-center">
+            <TreeBranch
+              node={tree}
+              onSelect={setSelectedNode}
+              getTitle={(key) => tNodes(`${key}.title`)}
+            />
+          </div>
+        ) : null}
+      </div>
+
+      <p className="mt-4 text-center text-xs text-muted-foreground">
+        {t("treeHint")}
+      </p>
 
       <Sheet
         open={selectedNode !== null}
@@ -83,8 +136,20 @@ export function RoadmapTree({
                 </SheetTitle>
                 <SheetDescription>{t("materialTitle")}</SheetDescription>
               </SheetHeader>
-              <div className="px-4 pb-4 text-sm leading-relaxed text-muted-foreground">
-                {tNodes(`${selectedNode.titleKey}.material`)}
+              <div className="space-y-4 px-4 pb-4">
+                <p className="text-sm text-muted-foreground">
+                  {tNodes(`${selectedNode.titleKey}.description`)}
+                </p>
+                <p className="text-sm leading-relaxed">
+                  {tNodes(`${selectedNode.titleKey}.material`)}
+                </p>
+                <Button
+                  className="w-full"
+                  variant="outline"
+                  onClick={() => setSelectedNode(null)}
+                >
+                  {t("closeMaterial")}
+                </Button>
               </div>
             </>
           ) : null}

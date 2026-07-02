@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { Footer } from "@/components/layout/Footer";
 import { HtmlLang } from "@/components/layout/HtmlLang";
 import { Navbar } from "@/components/layout/Navbar";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { AuthProvider } from "@/hooks/useAuth";
 import { routing } from "@/i18n/routing";
 
@@ -30,12 +31,14 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <AuthProvider>
-        <HtmlLang />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <HtmlLang />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </AuthProvider>
+      </ThemeProvider>
     </NextIntlClientProvider>
   );
 }

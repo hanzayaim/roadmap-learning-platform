@@ -1,7 +1,5 @@
 "use client";
 
-import { Code, Database, Palette, Server } from "lucide-react";
-
 import { VoteButtons } from "@/components/shared/VoteButtons";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -14,13 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
-
-const iconMap = {
-  code: Code,
-  palette: Palette,
-  database: Database,
-  server: Server,
-} as const;
+import { categoryIconMap, type CategoryIcon } from "@/lib/category-icons";
 
 interface RoadmapCardClientProps {
   href: string;
@@ -74,7 +66,7 @@ interface CategoryCardClientProps {
   href: string;
   title: string;
   roadmapCountLabel: string;
-  icon: keyof typeof iconMap;
+  icon: CategoryIcon;
 }
 
 export function CategoryCardClient({
@@ -83,7 +75,7 @@ export function CategoryCardClient({
   roadmapCountLabel,
   icon,
 }: CategoryCardClientProps) {
-  const Icon = iconMap[icon];
+  const Icon = categoryIconMap[icon];
 
   return (
     <Link href={href}>
