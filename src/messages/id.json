@@ -26,7 +26,50 @@
   },
   "leaderboardPage": {
     "title": "Peringkat",
-    "comingSoon": "Halaman peringkat akan hadir di Fase 4."
+    "subtitle": "Lihat siapa yang memimpin chart belajar pada periode ini.",
+    "tabs": {
+      "weekly": "Mingguan",
+      "monthly": "Bulanan",
+      "yearly": "Tahunan"
+    },
+    "rankColumn": "Peringkat",
+    "learnerColumn": "Pelajar",
+    "pointsColumn": "Poin",
+    "pointsValue": "{count} poin"
+  },
+  "topUpPage": {
+    "title": "Top up koin",
+    "subtitle": "Pilih paket koin. Harga ditampilkan sesuai mata uang locale aktif.",
+    "popularBadge": "Populer",
+    "coinsAmount": "{count} koin",
+    "buyButton": "Beli paket",
+    "packages": {
+      "starter": {
+        "title": "Starter",
+        "description": "Boost kecil untuk unlock roadmap berikutnya."
+      },
+      "popular": {
+        "title": "Populer",
+        "description": "Nilai terbaik untuk pelajar rutin."
+      },
+      "pro": {
+        "title": "Pro",
+        "description": "Lebih banyak koin untuk beberapa jalur belajar."
+      },
+      "ultimate": {
+        "title": "Ultimate",
+        "description": "Koin maksimal untuk pelajar intensif."
+      }
+    },
+    "checkout": {
+      "title": "Konfirmasi checkout",
+      "description": "Ini simulasi checkout preview. Tidak ada pembayaran nyata.",
+      "packageLabel": "Paket",
+      "coinsLabel": "Koin",
+      "totalLabel": "Total",
+      "cancel": "Batal",
+      "confirm": "Konfirmasi pembelian"
+    }
   },
   "explorePage": {
     "searchPlaceholder": "Cari kategori atau roadmap...",
@@ -194,6 +237,7 @@
     "emailLabel": "Email",
     "coinsLabel": "Saldo koin",
     "coinsValue": "{count} koin",
+    "topUpButton": "Top up koin",
     "historySection": "Riwayat koin",
     "historyDescription": "Top-up dan pengeluaran terbaru dari mock data.",
     "amountPositive": "+{count}",

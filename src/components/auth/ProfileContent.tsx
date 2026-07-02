@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -14,7 +15,7 @@ import {
 } from "@/components/ui/card";
 import { MOCK_COIN_HISTORY } from "@/data/user";
 import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 
 export function ProfileContent() {
   const t = useTranslations("profilePage");
@@ -59,10 +60,15 @@ export function ProfileContent() {
           </div>
           <div className="sm:col-span-2">
             <p className="text-sm text-muted-foreground">{t("coinsLabel")}</p>
-            <p className="flex items-center gap-2 text-lg font-semibold">
-              <Coins className="size-5" />
-              {t("coinsValue", { count: user.coins })}
-            </p>
+            <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="flex items-center gap-2 text-lg font-semibold">
+                <Coins className="size-5" />
+                {t("coinsValue", { count: user.coins })}
+              </p>
+              <Button size="sm" render={<Link href="/topup" />}>
+                {t("topUpButton")}
+              </Button>
+            </div>
           </div>
         </CardContent>
       </Card>

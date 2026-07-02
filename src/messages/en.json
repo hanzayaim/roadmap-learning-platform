@@ -26,7 +26,50 @@
   },
   "leaderboardPage": {
     "title": "Leaderboard",
-    "comingSoon": "Leaderboard is coming in Phase 4."
+    "subtitle": "See who is leading the learning charts this period.",
+    "tabs": {
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "rankColumn": "Rank",
+    "learnerColumn": "Learner",
+    "pointsColumn": "Points",
+    "pointsValue": "{count} pts"
+  },
+  "topUpPage": {
+    "title": "Top up coins",
+    "subtitle": "Choose a coin package. Prices are shown in your active locale currency.",
+    "popularBadge": "Popular",
+    "coinsAmount": "{count} coins",
+    "buyButton": "Buy package",
+    "packages": {
+      "starter": {
+        "title": "Starter",
+        "description": "A small boost for your next roadmap unlock."
+      },
+      "popular": {
+        "title": "Popular",
+        "description": "Best value for regular learners."
+      },
+      "pro": {
+        "title": "Pro",
+        "description": "More coins for multiple learning paths."
+      },
+      "ultimate": {
+        "title": "Ultimate",
+        "description": "Maximum coins for power learners."
+      }
+    },
+    "checkout": {
+      "title": "Confirm checkout",
+      "description": "This is a preview checkout simulation. No real payment is processed.",
+      "packageLabel": "Package",
+      "coinsLabel": "Coins",
+      "totalLabel": "Total",
+      "cancel": "Cancel",
+      "confirm": "Confirm purchase"
+    }
   },
   "explorePage": {
     "searchPlaceholder": "Search categories or roadmaps...",
@@ -194,6 +237,7 @@
     "emailLabel": "Email",
     "coinsLabel": "Coin balance",
     "coinsValue": "{count} coins",
+    "topUpButton": "Top up coins",
     "historySection": "Coin history",
     "historyDescription": "Recent top-ups and spending from mock data.",
     "amountPositive": "+{count}",
