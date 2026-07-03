@@ -1,7 +1,7 @@
 "use client";
 
 import { Coins, Sparkles } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
@@ -30,7 +30,6 @@ interface CoinPackageGridProps {
 }
 
 export function CoinPackageGrid({ packages }: CoinPackageGridProps) {
-  const locale = useLocale();
   const t = useTranslations("topUpPage");
   const [selectedPackage, setSelectedPackage] = useState<CoinPackage | null>(
     null,
@@ -81,7 +80,7 @@ export function CoinPackageGrid({ packages }: CoinPackageGridProps) {
                 {t("coinsAmount", { count: coinPackage.coins })}
               </p>
               <p className="text-lg font-semibold">
-                {formatPackagePrice(locale, coinPackage)}
+                {formatPackagePrice(coinPackage)}
               </p>
             </CardContent>
             <CardFooter>
@@ -132,7 +131,7 @@ export function CoinPackageGrid({ packages }: CoinPackageGridProps) {
                     {t("checkout.totalLabel")}
                   </span>
                   <span className="text-base font-semibold">
-                    {formatPackagePrice(locale, selectedPackage)}
+                    {formatPackagePrice(selectedPackage)}
                   </span>
                 </div>
               </div>

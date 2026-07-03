@@ -9,17 +9,33 @@ import {
   RoadmapCardClient,
 } from "@/components/shared/ExploreCardsClient";
 import { Input } from "@/components/ui/input";
+import type { Audience } from "@/types/audience";
 import type { Category, Roadmap } from "@/types/roadmap";
 import { countRoadmapNodes } from "@/utils/roadmap-tree";
 
 interface ExploreHubProps {
+  audience?: Audience;
   categories: Array<Category & { roadmapCount: number }>;
   trendingRoadmaps: Roadmap[];
 }
 
-export function ExploreHub({ categories, trendingRoadmaps }: ExploreHubProps) {
+function withAudienceQuery(path: string, audience?: Audience) {
+  if (!audience) return path;
+  return `${path}?audience=${audience}`;
+}
+
+function audienceMessageKey(audience: Audience) {
+  return audience === "sma-smk" ? "smaSmk" : "college";
+}
+
+export function ExploreHub({
+  audience,
+  categories,
+  trendingRoadmaps,
+}: ExploreHubProps) {
   const [query, setQuery] = useState("");
   const t = useTranslations("explorePage");
+  const tAudience = useTranslations("audience");
   const tCategories = useTranslations("categories");
   const tRoadmaps = useTranslations("roadmaps");
   const tVote = useTranslations("vote");
@@ -49,6 +65,19 @@ export function ExploreHub({ categories, trendingRoadmaps }: ExploreHubProps) {
   const hasResults =
     filteredCategories.length > 0 || filteredTrending.length > 0;
 
+  const categoriesTitle = audience
+    ? tAudience(`${audienceMessageKey(audience)}CategoriesTitle`)
+    : t("categoriesTitle");
+  const categoriesDescription = audience
+    ? tAudience(`${audienceMessageKey(audience)}CategoriesDescription`)
+    : t("categoriesDescription");
+  const trendingTitle = audience
+    ? tAudience(`${audienceMessageKey(audience)}TrendingTitle`)
+    : t("trendingTitle");
+  const trendingDescription = audience
+    ? tAudience(`${audienceMessageKey(audience)}TrendingDescription`)
+    : t("trendingDescription");
+
   return (
     <div className="space-y-12">
       <section className="space-y-4">
@@ -74,15 +103,15 @@ export function ExploreHub({ categories, trendingRoadmaps }: ExploreHubProps) {
         <section className="space-y-4">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              {t("categoriesTitle")}
+              {categoriesTitle}
             </h2>
-            <p className="text-muted-foreground">{t("categoriesDescription")}</p>
+            <p className="text-muted-foreground">{categoriesDescription}</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredCategories.map((category) => (
               <CategoryCardClient
                 key={category.slug}
-                href={`/category/${category.slug}`}
+                href={withAudienceQuery(`/category/${category.slug}`, audience)}
                 title={tCategories(category.titleKey)}
                 roadmapCountLabel={t("roadmapCount", {
                   count: category.roadmapCount,
@@ -98,9 +127,9 @@ export function ExploreHub({ categories, trendingRoadmaps }: ExploreHubProps) {
         <section className="space-y-4">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">
-              {t("trendingTitle")}
+              {trendingTitle}
             </h2>
-            <p className="text-muted-foreground">{t("trendingDescription")}</p>
+            <p className="text-muted-foreground">{trendingDescription}</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {filteredTrending.map((roadmap) => (

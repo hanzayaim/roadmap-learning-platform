@@ -14,6 +14,7 @@ import {
 import { Link } from "@/i18n/navigation";
 import { categoryIconMap } from "@/lib/category-icons";
 import type { CategoryIcon } from "@/lib/category-icons";
+import type { Audience } from "@/types/audience";
 import type { Roadmap } from "@/types/roadmap";
 import { countRoadmapNodes } from "@/utils/roadmap-tree";
 
@@ -94,6 +95,7 @@ interface SubcategoryCardProps {
   slug: string;
   titleKey: string;
   roadmapCount: number;
+  audience?: Audience;
 }
 
 export async function SubcategoryCard({
@@ -101,12 +103,16 @@ export async function SubcategoryCard({
   slug,
   titleKey,
   roadmapCount,
+  audience,
 }: SubcategoryCardProps) {
   const t = await getTranslations("subcategories");
   const tExplore = await getTranslations("explorePage");
+  const href = audience
+    ? `/category/${categorySlug}/${slug}?audience=${audience}`
+    : `/category/${categorySlug}/${slug}`;
 
   return (
-    <Link href={`/category/${categorySlug}/${slug}`}>
+    <Link href={href}>
       <Card className="h-full transition-colors hover:bg-muted/40">
         <CardHeader>
           <CardTitle className="text-lg">{t(titleKey)}</CardTitle>

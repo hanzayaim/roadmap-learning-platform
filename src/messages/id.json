@@ -1,16 +1,18 @@
 {
   "layout": {
-    "brandName": "BelajarYuk",
+    "brandName": "Spark",
     "nav": {
       "home": "Beranda",
-      "explore": "Jelajahi",
+      "smaSmk": "SMA/SMK",
+      "college": "Kuliah",
+      "work": "Kerja",
       "leaderboard": "Peringkat",
       "login": "Masuk",
       "register": "Daftar",
       "logout": "Keluar"
     },
     "footer": {
-      "copyright": "© {year} BelajarYuk",
+      "copyright": "© {year} Spark",
       "tagline": "Jalur belajar interaktif di berbagai bidang."
     },
     "themeLight": "Mode terang",
@@ -18,12 +20,295 @@
   },
   "homePage": {
     "heroTitle": "Belajar dengan roadmap interaktif",
-    "heroSubtitle": "Jelajahi topik per bidang, ikuti setiap langkah, dan buka materi belajar di sepanjang jalur."
+    "heroSubtitle": "Pilih jalur belajar sesuai tahap pendidikanmu.",
+    "audienceTitle": "Kamu belajar untuk siapa?",
+    "audienceDescription": "Pilih jalur yang sesuai — konten dan fokusnya disesuaikan untuk masing-masing kelompok."
   },
-  "languageSwitcher": {
-    "label": "Bahasa",
-    "id": "Indonesia",
-    "en": "English"
+  "audience": {
+    "focusLabel": "Fokus",
+    "smaSmkTitle": "SMA / SMK",
+    "smaSmkDescription": "Kenali berbagai bidang, temukan minatmu, dan persiapkan jurusan atau karier yang tepat.",
+    "smaSmkFocus": "Eksplorasi jurusan & karier",
+    "smaSmkBadge": "Untuk pelajar SMA/SMK",
+    "smaSmkPageSubtitle": "Pahami berbagai bidang sebelum memilih jurusan, dengan roadmap terpandu dan tes minat bakat.",
+    "collegeTitle": "Mahasiswa",
+    "collegeDescription": "Bangun skill siap kerja, dalami bidangmu, dan persiapkan magang serta karier.",
+    "collegeFocus": "Kesiapan karier & skill mendalam",
+    "collegeBadge": "Untuk mahasiswa",
+    "collegePageSubtitle": "Pelajari bidangmu lebih dalam dengan roadmap fokus skill, portofolio, dan persiapan karier.",
+    "aptitudeTestTitle": "Tes Minat Bakat",
+    "aptitudeTestDescription": "Jawab 6 pertanyaan singkat untuk mengetahui bidang yang mungkin cocok untukmu.",
+    "startAptitudeTest": "Mulai tes",
+    "smaSmkCategoriesTitle": "Jelajahi bidang",
+    "smaSmkCategoriesDescription": "Telusuri roadmap pengantar untuk membantu memilih arah.",
+    "smaSmkTrendingTitle": "Populer untuk SMA/SMK",
+    "smaSmkTrendingDescription": "Roadmap yang sedang banyak dieksplorasi pelajar seumuranmu.",
+    "collegeCategoriesTitle": "Dalami bidangmu",
+    "collegeCategoriesDescription": "Roadmap berfokus skill untuk magang, portofolio, dan persiapan karier.",
+    "collegeTrendingTitle": "Populer untuk mahasiswa",
+    "collegeTrendingDescription": "Roadmap yang sedang banyak diikuti mahasiswa.",
+    "workTitle": "Pekerja",
+    "workDescription": "Tingkatkan skill spesifik, pahami prospek karier, dan naik level di bidangmu.",
+    "workFocus": "Prospek karier & skill spesifik",
+    "workBadge": "Untuk pekerja profesional",
+    "workPageSubtitle": "Sudah bekerja? Dalami prospek industri dan skill teknis lanjutan di bidangmu."
+  },
+  "journey": {
+    "flowLabel": "Alur belajar",
+    "backToHub": "Kembali ke ringkasan",
+    "startJourney": "Mulai alur",
+    "hubStartTitle": "Ikuti alur belajar terstruktur",
+    "continueTo": "Lanjut ke {step}",
+    "backstoryTitle": "Backstory",
+    "backstoryDescription": "Kenali konteks dan latar belakang",
+    "thoughtProcessTitle": "Thought Process",
+    "thoughtProcessDescription": "Cara berpikir sebelum memilih arah",
+    "careersTitle": "Cita-cita Karier",
+    "careersDescription": "Pilih profesi yang ingin kamu kejar",
+    "fieldsTitle": "Bidang",
+    "fieldsDescription": "Pilih bidang yang ingin kamu dalami",
+    "smaSmkHubStartDesc": "Backstory → Thought Process → Jadi Engineer, Arsitek, dan profesi lainnya.",
+    "collegeHubStartDesc": "Backstory → Thought Process → Bidang → Fundamental → Teknikal + insight kerja & penghasilan.",
+    "workHubStartDesc": "Backstory → Thought Process → Bidang → Prospek karier → Teknikal spesifik.",
+    "smaSmkBackstoryTitle": "Ceritamu sebagai pelajar SMA/SMK",
+    "smaSmkBackstorySubtitle": "Memilih jurusan itu besar — kamu layak punya gambaran yang jelas sebelum memutuskan.",
+    "smaSmkBackstoryP1": "Banyak siswa memilih jurusan karena ikut-ikutan teman, tekanan orang tua, atau sekadar terdengar keren — tanpa benar-benar tahu apa yang menanti di balik profesi itu.",
+    "smaSmkBackstoryP2": "Spark membantumu memahami dunia kerja dari sudut pandang yang relevan untuk usiamu: apa sih yang dilakukan seorang engineer, arsitek, atau perawat sehari-hari?",
+    "smaSmkBackstoryP3": "Ini bukan tentang memilih sekarang juga — tapi tentang membuka pilihan dengan informasi yang cukup.",
+    "smaSmkThoughtTitle": "Thought Process: bagaimana memilih arah?",
+    "smaSmkThoughtSubtitle": "Sebelum memilih profesi, latih cara berpikir yang membantumu menilai minat dan bakat.",
+    "smaSmkThoughtP1": "Tanyakan pada dirimu: aktivitas apa yang membuat waktu terasa cepat? Masalah seperti apa yang ingin kamu selesaikan?",
+    "smaSmkThoughtP2": "Gunakan tes minat bakat untuk mendapat gambaran awal, lalu eksplorasi profesi yang paling cocok.",
+    "smaSmkThoughtStep1Title": "Kenali dirimu",
+    "smaSmkThoughtStep1Desc": "Minat, kebiasaan belajar, dan hal yang kamu nikmati.",
+    "smaSmkThoughtStep2Title": "Ikuti tes minat bakat",
+    "smaSmkThoughtStep2Desc": "Dapatkan rekomendasi bidang awal.",
+    "smaSmkThoughtStep3Title": "Eksplorasi profesi",
+    "smaSmkThoughtStep3Desc": "Lihat jalur 'Jadi...' yang paling menarik.",
+    "smaSmkCareersSubtitle": "Pilih profesi yang ingin kamu bayangkan sebagai masa depanmu.",
+    "collegeBackstoryTitle": "Ceritamu sebagai mahasiswa",
+    "collegeBackstorySubtitle": "Kuliah adalah waktu untuk mengubah minat menjadi skill yang siap dipakai di dunia kerja.",
+    "collegeBackstoryP1": "Kamu sudah memilih jurusan — sekarang tantangannya adalah memastikan apa yang kamu pelajari benar-benar berguna setelah lulus.",
+    "collegeBackstoryP2": "Setiap bidang punya lapisan belajar: fundamental untuk fondasi, teknikal untuk skill kerja, plus insight tentang cara kerja dan cara menghasilkan.",
+    "collegeBackstoryP3": "Alur ini dirancang agar kamu tidak hanya hafal teori, tapi paham bagaimana karier ini berjalan di dunia nyata.",
+    "collegeThoughtTitle": "Thought Process: dari teori ke praktik",
+    "collegeThoughtSubtitle": "Bangun fondasi dulu, baru dalami bagian teknis dan realita kerja.",
+    "collegeThoughtP1": "Mulai dari fundamental untuk memahami konsep inti bidangmu — ini dasar sebelum masuk ke skill yang lebih spesifik.",
+    "collegeThoughtP2": "Setelah itu, pelajari bagian teknis dan baca insight tentang bagaimana pekerjaan sehari-hari dan peluang penghasilannya.",
+    "collegeModule_fundamentalsTitle": "Fundamental",
+    "collegeModule_fundamentalsDesc": "Konsep dasar yang wajib dikuasai.",
+    "collegeModule_technicalTitle": "Teknikal",
+    "collegeModule_technicalDesc": "Skill praktis untuk dunia kerja.",
+    "collegeModule_workInsightTitle": "Insight Kerja",
+    "collegeModule_workInsightDesc": "Sehari-hari di profesi ini seperti apa.",
+    "collegeModule_earningInsightTitle": "Insight Penghasilan",
+    "collegeModule_earningInsightDesc": "Cara orang di bidang ini mencari uang.",
+    "collegeFieldsSubtitle": "Pilih bidang, lalu ikuti urutan: fundamental → teknikal → insight.",
+    "collegeFieldFlowHint": "Urutan belajar: 1 Fundamental → 2 Teknikal → 3 Insight Kerja → 4 Insight Penghasilan",
+    "workBackstoryTitle": "Ceritamu sebagai pekerja",
+    "workBackstorySubtitle": "Sudah di dunia kerja — sekarang waktunya naik level dengan skill yang lebih tajam.",
+    "workBackstoryP1": "Kamu sudah punya pengalaman, tapi industri terus berubah. Yang dibutuhkan sekarang bukan lagi pengenalan dasar, tapi pemahaman prospek dan skill teknis spesifik.",
+    "workBackstoryP2": "Di tahap ini, fokusmu adalah: ke mana karier ini menuju, dan skill apa yang membedakanmu dari yang lain.",
+    "workBackstoryP3": "Alur ini membantumu mengevaluasi langkah berikutnya — promosi, pivot, atau spesialisasi.",
+    "workThoughtTitle": "Thought Process: naik level karier",
+    "workThoughtSubtitle": "Evaluasi prospek dulu, lalu asah skill teknis yang spesifik.",
+    "workThoughtP1": "Pahami tren industri, permintaan pasar, dan jalur karier jangka menengah di bidangmu.",
+    "workThoughtP2": "Setelah itu, fokus pada skill teknis lanjutan yang langsung relevan dengan pekerjaanmu saat ini atau target berikutnya.",
+    "workModule_prospectsTitle": "Prospek Karier",
+    "workModule_prospectsDesc": "Tren, peluang, dan arah industri.",
+    "workModule_specificTechnicalTitle": "Teknikal Spesifik",
+    "workModule_specificTechnicalDesc": "Skill lanjutan di luar level fundamental.",
+    "workFieldsSubtitle": "Pilih bidang kerjamu, lalu dalami prospek dan skill spesifiknya.",
+    "workFieldFlowHint": "Urutan belajar: 1 Prospek Karier → 2 Teknikal Spesifik",
+    "becomeEngineer": "Jadi Engineer",
+    "becomeEngineerDesc": "Kenali dunia software, hardware, dan teknologi sebelum memilih jurusan IT.",
+    "becomeArchitect": "Jadi Arsitek",
+    "becomeArchitectDesc": "Pelajari apa yang dilakukan arsitek dan bagaimana jalur pendidikannya.",
+    "becomeNurse": "Jadi Perawat",
+    "becomeNurseDesc": "Pahami dunia keperawatan dan apakah profesi ini cocok untukmu.",
+    "becomeDesigner": "Jadi Desainer",
+    "becomeDesignerDesc": "Eksplorasi karier desain grafis dan kreatif.",
+    "becomeMarketer": "Jadi Marketer",
+    "becomeMarketerDesc": "Kenali dunia pemasaran dan strategi brand.",
+    "becomeFinancialAnalyst": "Jadi Analis Keuangan",
+    "becomeFinancialAnalystDesc": "Pahami karier di bidang keuangan dan analisis.",
+    "fieldIt": "Teknologi Informasi",
+    "fieldItDesc": "Software, data, dan karier digital.",
+    "fieldArchitecture": "Arsitektur",
+    "fieldArchitectureDesc": "Desain bangunan dan perencanaan ruang.",
+    "fieldFinance": "Keuangan",
+    "fieldFinanceDesc": "Analisis, akuntansi, dan perbankan.",
+    "fieldHealthcare": "Kesehatan",
+    "fieldHealthcareDesc": "Keperawatan dan layanan kesehatan.",
+    "fieldCreative": "Industri Kreatif",
+    "fieldCreativeDesc": "Desain, konten, dan media.",
+    "fieldBusiness": "Bisnis",
+    "fieldBusinessDesc": "Marketing, manajemen, dan entrepreneurship.",
+    "fundamentalsTitle": "Fundamental",
+    "fundamentalsDesc": "Konsep dasar yang menjadi fondasi bidang ini.",
+    "technicalTitle": "Teknikal",
+    "technicalDesc": "Skill praktis yang dipakai di dunia kerja.",
+    "workInsightTitle": "Insight Kerja",
+    "workInsightDesc": "Keseharian profesional di bidang ini.",
+    "earningInsightTitle": "Insight Penghasilan",
+    "earningInsightDesc": "Sumber penghasilan dan peluang ekonomi.",
+    "prospectsTitle": "Prospek Karier",
+    "prospectsDesc": "Tren industri dan peluang ke depan.",
+    "specificTechnicalTitle": "Teknikal Spesifik",
+    "specificTechnicalDesc": "Skill lanjutan untuk naik level.",
+    "backToCareers": "Kembali ke cita-cita karier",
+    "backToFields": "Kembali ke daftar bidang",
+    "backToField": "Kembali ke bidang",
+    "careerDetailWhatYouLearn": "Apa yang akan kamu pelajari",
+    "openRoadmap": "Buka roadmap",
+    "careerComingSoon": "Roadmap untuk profesi ini segera hadir.",
+    "careerDetail_become-engineer": "Kamu akan belajar apa itu dunia IT, peran umum seperti developer dan designer, serta skill dasar yang bisa dicoba dari SMA.",
+    "careerDetail_become-architect": "Kamu akan belajar dasar arsitektur, proses desain, dan apa yang perlu disiapkan sebelum kuliah arsitektur.",
+    "careerDetail_become-nurse": "Kamu akan belajar gambaran profesi perawat, tantangan di lapangan, dan jurusan yang relevan.",
+    "careerDetail_become-designer": "Kamu akan belajar prinsip desain, tools dasar, dan bagaimana desainer bekerja.",
+    "careerDetail_become-marketer": "Kamu akan belajar apa itu marketing, contoh kampanye, dan skill yang perlu diasah.",
+    "careerDetail_become-financial-analyst": "Kamu akan belajar peran analis keuangan, skill angka, dan jalur sertifikasi."
+  },
+  "journeyContent": {
+    "itWorkInsight": {
+      "intro": "Sehari-hari engineer bekerja dalam tim untuk membangun dan memperbaiki produk digital.",
+      "body": "Hari biasa bisa berisi membaca kode, menulis fitur baru, debugging, rapat singkat, dan berkolaborasi dengan designer atau product manager.",
+      "tip": "Internship atau proyek pribadi adalah cara terbaik merasakan ritme kerja sebelum lulus."
+    },
+    "itEarningInsight": {
+      "intro": "Penghasilan di IT bervariasi berdasarkan role, skill, dan lokasi.",
+      "body": "Software engineer pemula bisa dari gaji karyawan, freelance project, atau kontribusi open source yang membangun reputasi.",
+      "tip": "Skill yang paling menaikkan nilai: kemampuan membangun produk end-to-end dan komunikasi tim."
+    },
+    "architectureWorkInsight": {
+      "intro": "Arsitek membantu klien mewujudkan bangunan yang fungsional dan aman.",
+      "body": "Pekerjaan meliputi sketsa, software CAD/BIM, koordinasi dengan engineer struktur, dan presentasi ke klien.",
+      "tip": "Portofolio desain dan software skill sama pentingnya dengan nilai akademik."
+    },
+    "architectureEarningInsight": {
+      "intro": "Arsitek bisa bekerja di firma, freelance, atau membuka studio sendiri.",
+      "body": "Penghasilan tumbuh seiring pengalaman proyek dan reputasi desain.",
+      "tip": "Spesialisasi (hijau, interior, urban) bisa membuka peluang fee lebih tinggi."
+    },
+    "financeWorkInsight": {
+      "intro": "Profesional keuangan mengolah data untuk keputusan bisnis.",
+      "body": "Harian bisa berisi analisis laporan, pembuatan model Excel, presentasi ke manajemen, dan riset pasar.",
+      "tip": "Akurasi dan kecepatan berpikir numerik adalah kunci di bidang ini."
+    },
+    "financeEarningInsight": {
+      "intro": "Gaji di keuangan sering terkait sertifikasi dan jenis institusi.",
+      "body": "Bank, konsultan, startup fintech, dan corporate finance menawarkan struktur kompensasi berbeda.",
+      "tip": "Sertifikasi seperti CFA atau CPA bisa membuka peluang signifikan."
+    },
+    "healthcareWorkInsight": {
+      "intro": "Tenaga kesehatan bekerja langsung dengan pasien dan tim medis.",
+      "body": "Perawat mengelola perawatan harian, dokumentasi, koordinasi dengan dokter, dan edukasi pasien.",
+      "tip": "Soft skill empati dan ketahanan fisik sama pentingnya dengan pengetahuan medis."
+    },
+    "healthcareEarningInsight": {
+      "intro": "Penghasilan bergantung spesialisasi, negara, dan institusi.",
+      "body": "Rumah sakit, klinik, perawatan home care, dan luar negeri menawarkan jalur berbeda.",
+      "tip": "Sertifikasi tambahan dan spesialisasi klinis meningkatkan peluang penghasilan."
+    },
+    "creativeWorkInsight": {
+      "intro": "Kreator dan desainer memecahkan masalah visual dan komunikasi.",
+      "body": "Harian bisa berisi brainstorming, desain iterasi, revisi klien, dan koordinasi dengan tim marketing.",
+      "tip": "Portofolio yang kuat sering lebih penting dari gelar untuk mendapat klien pertama."
+    },
+    "creativeEarningInsight": {
+      "intro": "Penghasilan bisa dari karyawan, freelance, atau bisnis kreatif sendiri.",
+      "body": "Agency, startup, platform freelance, dan klien langsung adalah sumber umum.",
+      "tip": "Niche yang jelas (brand identity, UI, motion) membantu menaikkan rate."
+    },
+    "businessWorkInsight": {
+      "intro": "Profesional bisnis menghubungkan produk dengan pasar.",
+      "body": "Marketing dan bisnis meliputi riset konsumen, strategi, eksekusi kampanye, dan analisis hasil.",
+      "tip": "Kemampuan data-driven decision making sangat dicari di era digital."
+    },
+    "businessEarningInsight": {
+      "intro": "Penghasilan tergantung role, industri, dan performa.",
+      "body": "Sales dan marketing sering punya komponen bonus; strategis role di corporate bisa stabil dengan growth jangka panjang.",
+      "tip": "Track record kampanye atau pertumbuhan bisnis adalah leverage gaji terbaik."
+    },
+    "itProspects": {
+      "intro": "Industri tech terus tumbuh dengan permintaan skill digital di semua sektor.",
+      "body": "AI, cloud, cybersecurity, dan product development adalah area dengan prospek kuat 5–10 tahun ke depan.",
+      "tip": "Fokus pada skill yang sulit diotomatisasi: arsitektur sistem, problem solving, dan kolaborasi."
+    },
+    "architectureProspects": {
+      "intro": "Urbanisasi dan kebutuhan hunian berkelanjutan mendukung permintaan arsitek.",
+      "body": "Green building, BIM, dan desain berbasis data menjadi diferensiator utama.",
+      "tip": "Kombinasikan desain dengan pemahaman regulasi dan sustainability."
+    },
+    "financeProspects": {
+      "intro": "Sektor keuangan tetap esensial meski tergeser oleh fintech.",
+      "body": "Analisis data keuangan, risk management, dan advisory tetap dibutuhkan.",
+      "tip": "Adaptasi ke tools analytics modern adalah keunggulan kompetitif."
+    },
+    "healthcareProspects": {
+      "intro": "Demografi dan kesadaran kesehatan mendorong permintaan tenaga medis.",
+      "body": "Spesialisasi klinis, telemedicine, dan manajemen kesehatan punya ruang tumbuh.",
+      "tip": "Lifelong learning adalah norma di bidang kesehatan."
+    },
+    "creativeProspects": {
+      "intro": "Konten digital dan brand experience terus berkembang.",
+      "body": "UI/UX, motion, dan content strategy punya permintaan tinggi di berbagai industri.",
+      "tip": "Bangun personal brand dan portofolio online yang konsisten."
+    },
+    "businessProspects": {
+      "intro": "Bisnis digital dan entrepreneurship membuka jalur karier non-tradisional.",
+      "body": "Growth marketing, product management, dan operasi startup sangat diminati.",
+      "tip": "Hasil terukur (revenue, growth, conversion) adalah bukti paling kuat."
+    }
+  },
+  "aptitudeTest": {
+    "badge": "SMA / SMK",
+    "pageTitle": "Tes Minat Bakat",
+    "pageSubtitle": "Tidak ada jawaban benar atau salah — pilih yang paling menggambarkan dirimu.",
+    "title": "Temukan minatmu",
+    "description": "Selesaikan semua pertanyaan untuk melihat rekomendasi bidang teratas.",
+    "progress": "Pertanyaan {current} dari {total}",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "finish": "Lihat hasil",
+    "resultTitle": "Bidang yang paling cocok",
+    "resultDescription": "Berdasarkan jawabanmu, bidang ini mungkin cocok. Ketuk untuk jelajahi roadmap.",
+    "rankLabel": "Cocok #{rank}",
+    "retake": "Ulangi tes",
+    "exploreRoadmaps": "Jelajahi roadmap",
+    "backToSmaSmk": "Kembali ke SMA/SMK",
+    "questions": {
+      "q1": "Aktivitas mana yang paling terdengar menyenangkan?",
+      "q1a": "Mendesain poster, logo, atau konten visual",
+      "q1b": "Membuat aplikasi, website, atau memecahkan teka-teki logika",
+      "q1c": "Membantu orang soal kesehatan atau kebugaran",
+      "q1d": "Menggambar bangunan atau merencanakan ruang",
+      "q2": "Dalam proyek kelompok, kamu biasanya...",
+      "q2a": "Mengurus angka, data, atau anggaran",
+      "q2b": "Memimpin arah kreatif dan presentasi",
+      "q2c": "Memastikan semua orang baik-baik saja",
+      "q2d": "Mengorganisir tugas dan menjaga tim tetap fokus",
+      "q3": "Kamu senang belajar tentang...",
+      "q3a": "Bagaimana bangunan dan kota didesain",
+      "q3b": "Bagaimana teknologi mengubah dunia",
+      "q3c": "Bagaimana tubuh manusia dan kedokteran bekerja",
+      "q3d": "Bagaimana uang, bisnis, dan pasar bekerja",
+      "q4": "Proyek sekolah impianmu adalah...",
+      "q4a": "Portofolio desain atau kampanye kreatif",
+      "q4b": "Prototipe atau demo teknologi yang berfungsi",
+      "q4c": "Rencana bisnis atau analisis pasar",
+      "q4d": "Presentasi kesehatan masyarakat atau sains",
+      "q5": "Kamu paling bangga ketika...",
+      "q5a": "Membuat sesuatu yang indah atau orisinal",
+      "q5b": "Memecahkan masalah rumit dengan logika",
+      "q5c": "Memahami konsep keuangan atau bisnis",
+      "q5d": "Membantu seseorang merasa lebih baik atau belajar",
+      "q6": "Setelah lulus, kamu ingin...",
+      "q6a": "Bekerja di bisnis, marketing, atau startup",
+      "q6b": "Membangun produk di bidang tech atau media digital",
+      "q6c": "Bekerja di kesehatan atau ilmu kehidupan",
+      "q6d": "Bekerja di keuangan, akuntansi, atau konsultasi"
+    }
   },
   "leaderboardPage": {
     "title": "Peringkat",
@@ -40,7 +325,7 @@
   },
   "topUpPage": {
     "title": "Top up koin",
-    "subtitle": "Pilih paket koin. Harga ditampilkan sesuai mata uang locale aktif.",
+    "subtitle": "Pilih paket koin. Harga ditampilkan dalam Rupiah (IDR).",
     "popularBadge": "Populer",
     "coinsAmount": "{count} koin",
     "buyButton": "Beli paket",
@@ -84,6 +369,7 @@
     "noResults": "Tidak ada hasil untuk \"{query}\".",
     "subcategoriesDescription": "Pilih topik untuk melihat roadmap yang tersedia.",
     "roadmapsDescription": "Pilih roadmap untuk mulai belajar.",
+    "noRoadmapsYet": "Belum ada roadmap belajar di sini. Cek lagi nanti.",
     "backToHome": "Kembali ke beranda",
     "backToSubcategories": "Kembali ke sub-kategori"
   },
@@ -127,7 +413,11 @@
     "marketingStrategist": "Jalur Marketing Strategist",
     "marketingStrategistDesc": "Pelajari karier marketing dari riset pasar hingga strategi digital.",
     "graphicDesignerPath": "Jalur Desainer Grafis",
-    "graphicDesignerPathDesc": "Bangun fundamental kreatif dan portofolio untuk karier desain."
+    "graphicDesignerPathDesc": "Bangun fundamental kreatif dan portofolio untuk karier desain.",
+    "itCareerPreview": "Mengenal Dunia IT",
+    "itCareerPreviewDesc": "Pengantar karier IT yang ramah pemula sebelum memilih jurusan.",
+    "internshipPrep": "Persiapan Magang",
+    "internshipPrepDesc": "CV, wawancara, dan networking untuk magang pertamamu."
   },
   "roadmapPage": {
     "learningPath": "Roadmap belajar",
@@ -136,7 +426,11 @@
     "materialTitle": "Materi belajar",
     "closeMaterial": "Tutup",
     "coinPrice": "Harga: {coin} koin",
-    "treeHint": "Solid = jalur inti · Putus-putus = opsional · Amber = spesialisasi"
+    "treeHint": "Solid = jalur inti · Putus-putus = opsional · Amber = spesialisasi",
+    "legendRoot": "Mulai",
+    "legendTopic": "Jalur inti",
+    "legendSubtopic": "Spesialisasi",
+    "legendOptional": "Opsional"
   },
   "roadmapNodes": {
     "careerStart": {
@@ -333,6 +627,41 @@
       "title": "Portofolio Kreatif",
       "description": "Tampilkan karya terbaikmu.",
       "material": "Studi kasus dengan proses dan hasil."
+    },
+    "whatIsItField": {
+      "title": "Apa itu IT?",
+      "description": "Pengenalan sederhana dunia teknologi.",
+      "material": "Pelajari apa yang dilakukan profesional IT dan di mana mereka bekerja."
+    },
+    "itRolesOverview": {
+      "title": "Peran Karier di IT",
+      "description": "Developer, desainer, data, dan lainnya.",
+      "material": "Bandingkan peran umum dan fokus masing-masing."
+    },
+    "itSkillsForStudents": {
+      "title": "Skill yang Bisa Dicoba",
+      "description": "Hal yang bisa dipelajari sejak SMA/SMK.",
+      "material": "Logika, coding dasar, dan latihan problem-solving."
+    },
+    "itMajorGuide": {
+      "title": "Memilih Jurusan IT",
+      "description": "Informatika, teknik informatika, dan sejenisnya.",
+      "material": "Perbedaan jurusan dan hal yang perlu dipertimbangkan."
+    },
+    "cvBuilding": {
+      "title": "Membuat CV",
+      "description": "Struktur dan sorot pengalamanmu.",
+      "material": "Template, kata kerja aksi, dan penyesuaian per role."
+    },
+    "interviewSkills": {
+      "title": "Skill Wawancara",
+      "description": "Persiapan format wawancara umum.",
+      "material": "Metode STAR, persiapan teknis, dan etika follow-up."
+    },
+    "professionalNetworking": {
+      "title": "Networking Profesional",
+      "description": "Terhubung dengan orang di bidang targetmu.",
+      "material": "Dasar LinkedIn, event, dan informational interview."
     }
   },
   "authPage": {

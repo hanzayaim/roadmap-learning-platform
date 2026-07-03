@@ -1,9 +1,23 @@
-import createMiddleware from "next-intl/middleware";
+import { type NextRequest, NextResponse } from "next/server";
 
-import { routing } from "./src/i18n/routing";
+export default function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
 
-export default createMiddleware(routing);
+  if (pathname === "/en" || pathname.startsWith("/en/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(/^\/en/, "") || "/";
+    return NextResponse.redirect(url);
+  }
+
+  if (pathname === "/id" || pathname.startsWith("/id/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(/^\/id/, "") || "/";
+    return NextResponse.redirect(url);
+  }
+
+  return NextResponse.next();
+}
 
 export const config = {
-  matcher: ["/", "/(id|en)/:path*"],
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };

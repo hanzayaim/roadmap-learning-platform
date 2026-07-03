@@ -1,6 +1,6 @@
-# Roadmap Learning Platform — Frontend Preview
+# Spark — Frontend Preview
 
-Platform pembelajaran berbasis roadmap. Repositori ini berisi fase **preview UI** dengan mock data dan dukungan multi-bahasa (Indonesia & English), dibangun dengan Next.js App Router, TypeScript, Tailwind CSS, dan Shadcn UI.
+**Spark** adalah platform pembelajaran berbasis roadmap. Repositori ini berisi fase **preview UI** dengan mock data (bahasa Indonesia), dibangun dengan Next.js App Router, TypeScript, Tailwind CSS, dan Shadcn UI.
 
 ## 📚 Dokumentasi
 
@@ -25,7 +25,7 @@ Dokumentasi teknis berada di folder [`roadmap-learning-platform-md`](../../roadm
 - **Framework**: Next.js (App Router)
 - **Bahasa**: TypeScript
 - **Styling**: Tailwind CSS + Shadcn UI
-- **i18n**: next-intl (`id` / `en`)
+- **Copy**: Bahasa Indonesia (next-intl, tanpa prefix locale)
 - **Form**: React Hook Form + Zod (Phase 2)
 - **Data**: Mock data statis di `src/data/` (tanpa API di fase preview)
 
@@ -36,19 +36,19 @@ npm install
 npm run dev
 ```
 
-Buka `http://localhost:3000/id` atau `http://localhost:3000/en`.
+Buka `http://localhost:3000`.
 
 ## 📁 Struktur Proyek (target)
 
 ```text
 src/
-├── app/[locale]/       # Halaman per locale
+├── app/                # Halaman (App Router)
 ├── components/         # UI, layout, shared
 ├── data/               # Mock data
 ├── hooks/              # Custom hooks
 ├── i18n/               # Konfigurasi next-intl
 ├── lib/                # Utilitas (cn, helpers)
-├── messages/           # en.json, id.json
+├── messages/           # id.json (copy Indonesia)
 ├── types/
 └── utils/
 ```

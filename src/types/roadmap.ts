@@ -1,4 +1,5 @@
 import type { CategoryIcon } from "@/lib/category-icons";
+import type { Audience } from "@/types/audience";
 
 export interface Category {
   slug: string;
@@ -27,6 +28,7 @@ export interface Roadmap {
   subcategorySlug: string;
   titleKey: string;
   descriptionKey: string;
+  audiences: Audience[];
   initialVotes: number;
   coinPrice: number;
   nodes: RoadmapNode[];

@@ -1,3 +1,4 @@
+import type { Audience } from "@/types/audience";
 import type { Roadmap } from "@/types/roadmap";
 
 export const MOCK_ROADMAPS: Roadmap[] = [
@@ -7,6 +8,7 @@ export const MOCK_ROADMAPS: Roadmap[] = [
     subcategorySlug: "software-engineering",
     titleKey: "softwareEngineerCareer",
     descriptionKey: "softwareEngineerCareerDesc",
+    audiences: ["college", "work"],
     initialVotes: 214,
     coinPrice: 50,
     nodes: [
@@ -23,11 +25,29 @@ export const MOCK_ROADMAPS: Roadmap[] = [
     ],
   },
   {
+    slug: "it-career-preview",
+    categorySlug: "it",
+    subcategorySlug: "software-engineering",
+    titleKey: "itCareerPreview",
+    descriptionKey: "itCareerPreviewDesc",
+    audiences: ["sma-smk"],
+    initialVotes: 176,
+    coinPrice: 0,
+    nodes: [
+      { id: "itp-root", titleKey: "careerStart", parentId: null, nodeType: "root" },
+      { id: "itp-what", titleKey: "whatIsItField", parentId: "itp-root" },
+      { id: "itp-roles", titleKey: "itRolesOverview", parentId: "itp-what" },
+      { id: "itp-skills", titleKey: "itSkillsForStudents", parentId: "itp-roles" },
+      { id: "itp-major", titleKey: "itMajorGuide", parentId: "itp-skills" },
+    ],
+  },
+  {
     slug: "financial-analyst-career",
     categorySlug: "finance",
     subcategorySlug: "financial-planning",
     titleKey: "financialAnalystCareer",
     descriptionKey: "financialAnalystCareerDesc",
+    audiences: ["college", "work"],
     initialVotes: 168,
     coinPrice: 45,
     nodes: [
@@ -46,6 +66,7 @@ export const MOCK_ROADMAPS: Roadmap[] = [
     subcategorySlug: "residential-design",
     titleKey: "architectCareer",
     descriptionKey: "architectCareerDesc",
+    audiences: ["sma-smk", "college"],
     initialVotes: 142,
     coinPrice: 55,
     nodes: [
@@ -65,6 +86,7 @@ export const MOCK_ROADMAPS: Roadmap[] = [
     subcategorySlug: "nursing-pathway",
     titleKey: "nursingCareer",
     descriptionKey: "nursingCareerDesc",
+    audiences: ["sma-smk", "college"],
     initialVotes: 189,
     coinPrice: 40,
     nodes: [
@@ -83,6 +105,7 @@ export const MOCK_ROADMAPS: Roadmap[] = [
     subcategorySlug: "marketing",
     titleKey: "marketingStrategist",
     descriptionKey: "marketingStrategistDesc",
+    audiences: ["sma-smk", "college"],
     initialVotes: 121,
     coinPrice: 35,
     nodes: [
@@ -100,6 +123,7 @@ export const MOCK_ROADMAPS: Roadmap[] = [
     subcategorySlug: "graphic-design",
     titleKey: "graphicDesignerPath",
     descriptionKey: "graphicDesignerPathDesc",
+    audiences: ["sma-smk", "college"],
     initialVotes: 134,
     coinPrice: 38,
     nodes: [
@@ -111,14 +135,49 @@ export const MOCK_ROADMAPS: Roadmap[] = [
       { id: "gd-portfolio", titleKey: "creativePortfolio", parentId: "gd-tools" },
     ],
   },
+  {
+    slug: "internship-prep",
+    categorySlug: "business",
+    subcategorySlug: "entrepreneurship",
+    titleKey: "internshipPrep",
+    descriptionKey: "internshipPrepDesc",
+    audiences: ["college", "work"],
+    initialVotes: 98,
+    coinPrice: 30,
+    nodes: [
+      { id: "ip-root", titleKey: "careerStart", parentId: null, nodeType: "root" },
+      { id: "ip-cv", titleKey: "cvBuilding", parentId: "ip-root" },
+      { id: "ip-interview", titleKey: "interviewSkills", parentId: "ip-cv" },
+      { id: "ip-network", titleKey: "professionalNetworking", parentId: "ip-interview" },
+    ],
+  },
 ];
 
-export const MOCK_TRENDING_SLUGS = [
-  "software-engineer-career",
-  "financial-analyst-career",
-  "architect-career",
-  "nursing-career",
-];
+const TRENDING_BY_AUDIENCE: Record<Audience, string[]> = {
+  "sma-smk": [
+    "it-career-preview",
+    "architect-career",
+    "nursing-career",
+    "graphic-designer-path",
+  ],
+  college: [
+    "software-engineer-career",
+    "financial-analyst-career",
+    "internship-prep",
+    "marketing-strategist",
+  ],
+  work: [
+    "software-engineer-career",
+    "financial-analyst-career",
+    "marketing-strategist",
+    "architect-career",
+  ],
+};
+
+function matchesAudience(roadmap: Roadmap, audience?: Audience) {
+  if (!audience) return true;
+  return roadmap.audiences.includes(audience);
+}
 
 export function getRoadmapBySlug(slug: string) {
   return MOCK_ROADMAPS.find((roadmap) => roadmap.slug === slug);
@@ -127,23 +186,33 @@ export function getRoadmapBySlug(slug: string) {
 export function getRoadmapsBySubcategory(
   categorySlug: string,
   subcategorySlug: string,
+  audience?: Audience,
 ) {
   return MOCK_ROADMAPS.filter(
     (roadmap) =>
       roadmap.categorySlug === categorySlug &&
-      roadmap.subcategorySlug === subcategorySlug,
+      roadmap.subcategorySlug === subcategorySlug &&
+      matchesAudience(roadmap, audience),
   );
 }
 
-export function getTrendingRoadmaps() {
-  return MOCK_TRENDING_SLUGS.map((slug) => getRoadmapBySlug(slug)).filter(
-    (roadmap): roadmap is Roadmap => Boolean(roadmap),
-  );
+export function getTrendingRoadmaps(audience?: Audience) {
+  const slugs = audience
+    ? TRENDING_BY_AUDIENCE[audience]
+    : TRENDING_BY_AUDIENCE.college;
+
+  return slugs
+    .map((slug) => getRoadmapBySlug(slug))
+    .filter((roadmap): roadmap is Roadmap => Boolean(roadmap));
 }
 
-export function getRoadmapCountByCategory(categorySlug: string) {
+export function getRoadmapCountByCategory(
+  categorySlug: string,
+  audience?: Audience,
+) {
   return MOCK_ROADMAPS.filter(
-    (roadmap) => roadmap.categorySlug === categorySlug,
+    (roadmap) =>
+      roadmap.categorySlug === categorySlug && matchesAudience(roadmap, audience),
   ).length;
 }
 
